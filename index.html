@@ -45,32 +45,24 @@
 				>
 				<ul class="hidden md:flex space-x-6">
 					<li>
-						<a href="/" class="hover:text-primary transition-colors">Home</a>
+						<a href="#" class="hover:text-primary transition-colors">Home</a>
 					</li>
 					<li>
-						<a href="/awards.html" class="hover:text-primary transition-colors"
-							>Awards</a
-						>
+						<a href="#" class="hover:text-primary transition-colors">Awards</a>
 					</li>
 					<li>
-						<a href="/blog.html" class="hover:text-primary transition-colors"
-							>Blog</a
-						>
+						<a href="#" class="hover:text-primary transition-colors">Blog</a>
 					</li>
 					<li>
-						<a href="/weekly.html" class="hover:text-primary transition-colors"
+						<a href="#" class="hover:text-primary transition-colors"
 							>TNI Weekly</a
 						>
 					</li>
 					<li>
-						<a href="/about.html" class="hover:text-primary transition-colors"
-							>About</a
-						>
+						<a href="#" class="hover:text-primary transition-colors">About</a>
 					</li>
 					<li>
-						<a href="/contact.html" class="hover:text-primary transition-colors"
-							>Contact</a
-						>
+						<a href="#" class="hover:text-primary transition-colors">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -79,151 +71,60 @@
 		<main class="container mx-auto px-4 pt-24 pb-12">
 			<!-- Hero Section -->
 			<section
-				class="bg-cover bg-center h-96 text-white relative"
-				style="background-image: url('your-hero-image.jpg')"
+				id="hero"
+				class="bg-cover bg-center h-96 text-white relative mb-12"
 			>
 				<div class="absolute inset-0 bg-black opacity-40"></div>
-				<div class="relative z-10 p-8">
+				<div class="relative z-10 p-8 flex flex-col justify-center h-full">
 					<h1 class="text-4xl font-bold mb-4">The Global Stage of Nollywood</h1>
 					<p class="text-lg mb-6">
 						Stay updated on the latest news, awards, and achievements from
 						Nollywood at prestigious events like the BET Awards & Grammys!
 					</p>
 					<a
-						href="/awards.html"
-						class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-red-600 transition-colors"
+						href="#"
+						class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-red-600 transition-colors w-max"
 						>Explore Latest Updates</a
 					>
 				</div>
 			</section>
 
 			<!-- Featured Awards Section -->
-			<section class="mb-12">
+			<section id="featured-awards" class="mb-12">
 				<h2 class="text-3xl font-bold mb-6 text-center my-8">
 					Latest Awards News
 				</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<!-- BET Awards Update -->
-					<div
-						class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105"
-					>
-						<img
-							src="bet-awards-image.jpg"
-							alt="BET Awards"
-							class="w-full h-48 object-cover"
-						/>
-						<div class="p-4">
-							<h3 class="text-xl font-semibold mb-2">
-								BET Awards 2025: Nollywood Shines!
-							</h3>
-							<p class="text-gray-600 dark:text-gray-300 mb-4">
-								Nollywood stars make their mark at the 2025 BET Awards. Learn
-								who took home the trophies!
-							</p>
-							<a href="/bet-awards-2025" class="text-primary hover:underline"
-								>Read more</a
-							>
-						</div>
-					</div>
-					<!-- Grammy Awards Update -->
-					<div
-						class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105"
-					>
-						<img
-							src="grammy-awards-image.jpg"
-							alt="Grammy Awards"
-							class="w-full h-48 object-cover"
-						/>
-						<div class="p-4">
-							<h3 class="text-xl font-semibold mb-2">
-								Grammys 2025: Nollywood Artists Take Over
-							</h3>
-							<p class="text-gray-600 dark:text-gray-300 mb-4">
-								Nollywood artists make waves at the 2025 Grammy Awards, breaking
-								barriers and setting records!
-							</p>
-							<a href="/grammy-awards-2025" class="text-primary hover:underline"
-								>Discover the Winners</a
-							>
-						</div>
-					</div>
-					<aside>
-						latest stories
-						<ul>
-							<li class="my-2 bg-gray-800 rounded text-gray-300 p-4">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-								vitae dolor necessitatibus alias ducimus quidem quam voluptas
-								deleniti ex officiis.
-							</li>
-							<li class="my-2 bg-gray-800 rounded text-gray-300 p-4">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-								vitae dolor necessitatibus alias ducimus quidem quam voluptas
-								deleniti ex officiis.
-							</li>
-							<li class="my-2 bg-gray-800 rounded text-gray-300 p-4">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-								vitae dolor necessitatibus alias ducimus quidem quam voluptas
-								deleniti ex officiis.
-							</li>
-							<li class="my-2 bg-gray-800 rounded text-gray-300 p-4">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-								vitae dolor necessitatibus alias ducimus quidem quam voluptas
-								deleniti ex officiis.
-							</li>
-							<p>
-								<a href="/">show more</a>
-							</p>
-						</ul>
-					</aside>
+				<div
+					id="awards-container"
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+				>
+					<!-- Awards content will be dynamically inserted here -->
 				</div>
 			</section>
 
 			<!-- Upcoming Awards Section -->
-			<section class="mb-12">
+			<section id="upcoming-awards" class="mb-12">
 				<h2 class="text-3xl font-bold mb-6 text-center">Upcoming Awards</h2>
 				<div
+					id="upcoming-awards-container"
 					class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 min-h-md"
 				>
-					<h3 class="text-2xl font-semibold mb-4">TNI Awards 2025</h3>
-					<p class="text-gray-600 dark:text-gray-300 mb-4">
-						Join us for a night of celebration as we honor the best in
-						Nollywood. Mark your calendars for August 15, 2025!
-					</p>
-					<a
-						href="/awards.html"
-						class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-red-600 transition-colors"
-						>Learn More</a
-					>
+					<!-- Upcoming awards content will be dynamically inserted here -->
 				</div>
 			</section>
 
 			<!-- Latest Blog Posts Section -->
-			<section>
+			<section id="latest-blog-posts">
 				<h2 class="text-3xl font-bold mb-6">Latest Blog Posts</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div
-						class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105"
-					>
-						<img
-							src="/placeholder.svg?height=200&width=400"
-							alt="Blog Post"
-							class="w-full h-48 object-cover"
-						/>
-						<div class="p-4">
-							<h3 class="text-xl font-semibold mb-2">
-								Behind the Scenes: Making of 'Lagos Nights'
-							</h3>
-							<p class="text-gray-600 dark:text-gray-300 mb-4">
-								Get an exclusive look at the production process of the highly
-								anticipated Nollywood thriller.
-							</p>
-							<a href="#" class="text-primary hover:underline">Read more</a>
-						</div>
-					</div>
+				<div
+					id="blog-posts-container"
+					class="grid grid-cols-1 md:grid-cols-2 gap-8"
+				>
+					<!-- Blog posts will be dynamically inserted here -->
 				</div>
 				<div class="text-center mt-8">
 					<a
-						href="/blog.html"
+						href="#"
 						class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-red-600 transition-colors"
 						>View All Posts</a
 					>
@@ -246,42 +147,32 @@
 						<h3 class="text-xl font-bold mb-4">Quick Links</h3>
 						<ul class="space-y-2">
 							<li>
-								<a href="/" class="hover:text-primary transition-colors"
+								<a href="#" class="hover:text-primary transition-colors"
 									>Home</a
 								>
 							</li>
 							<li>
-								<a
-									href="/awards.html"
-									class="hover:text-primary transition-colors"
+								<a href="#" class="hover:text-primary transition-colors"
 									>Awards</a
 								>
 							</li>
 							<li>
-								<a
-									href="/blog.html"
-									class="hover:text-primary transition-colors"
+								<a href="#" class="hover:text-primary transition-colors"
 									>Blog</a
 								>
 							</li>
 							<li>
-								<a
-									href="/weekly.html"
-									class="hover:text-primary transition-colors"
+								<a href="#" class="hover:text-primary transition-colors"
 									>TNI Weekly</a
 								>
 							</li>
 							<li>
-								<a
-									href="/about.html"
-									class="hover:text-primary transition-colors"
+								<a href="#" class="hover:text-primary transition-colors"
 									>About</a
 								>
 							</li>
 							<li>
-								<a
-									href="/contact.html"
-									class="hover:text-primary transition-colors"
+								<a href="#" class="hover:text-primary transition-colors"
 									>Contact</a
 								>
 							</li>
@@ -316,5 +207,120 @@
 				</div>
 			</div>
 		</footer>
+
+		<script>
+			// Data arrays
+			const awardsData = [
+				{
+					title: "BET Awards 2025: Nollywood Shines!",
+					description:
+						"Nollywood stars make their mark at the 2025 BET Awards. Learn who took home the trophies!",
+					image: "https://example.com/bet-awards-2025.jpg",
+					link: "#",
+				},
+				{
+					title: "Grammys 2025: Nollywood Artists Take Over",
+					description:
+						"Nollywood artists make waves at the 2025 Grammy Awards, breaking barriers and setting records!",
+					image: "https://example.com/grammy-awards-2025.jpg",
+					link: "#",
+				},
+				{
+					title: "AMVCA 2025: Celebrating African Cinema",
+					description:
+						"The Africa Magic Viewers' Choice Awards honor the best in African film and television. See the winners!",
+					image: "https://example.com/amvca-2025.jpg",
+					link: "#",
+				},
+			];
+
+			const upcomingAwardsData = {
+				title: "TNI Awards 2025",
+				description:
+					"Join us for a night of celebration as we honor the best in Nollywood. Mark your calendars for August 15, 2025!",
+				date: "August 15, 2025",
+				venue: "Eko Convention Center, Lagos",
+				link: "#",
+			};
+
+			const blogPostsData = [
+				{
+					title: "Behind the Scenes: Making of 'Lagos Nights'",
+					description:
+						"Get an exclusive look at the production process of the highly anticipated Nollywood thriller.",
+					image: "https://example.com/lagos-nights-bts.jpg",
+					link: "#",
+				},
+				{
+					title: "Rising Stars: New Faces in Nollywood",
+					description:
+						"Discover the fresh talent making waves in the Nigerian film industry.",
+					image: "https://example.com/rising-stars-nollywood.jpg",
+					link: "#",
+				},
+			];
+
+			// Function to populate awards
+			function populateAwards() {
+				const container = document.getElementById("awards-container");
+				awardsData.forEach((award) => {
+					const awardElement = `
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                        <img src="${award.image}" alt="${award.title}" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold mb-2">${award.title}</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">${award.description}</p>
+                            <a href="${award.link}" class="text-primary hover:underline">Read more</a>
+                        </div>
+                    </div>
+                `;
+					container.innerHTML += awardElement;
+				});
+			}
+
+			// Function to populate upcoming awards
+			function populateUpcomingAwards() {
+				const container = document.getElementById("upcoming-awards-container");
+				container.innerHTML = `
+                <h3 class="text-2xl font-semibold mb-4">${upcomingAwardsData.title}</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">${upcomingAwardsData.description}</p>
+                <p class="text-gray-600 dark:text-gray-300 mb-2"><strong>Date:</strong> ${upcomingAwardsData.date}</p>
+                <p class="text-gray-600 dark:text-gray-300 mb-4"><strong>Venue:</strong> ${upcomingAwardsData.venue}</p>
+                <a href="${upcomingAwardsData.link}" class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-red-600 transition-colors">Learn More</a>
+            `;
+			}
+
+			// Function to populate blog posts
+			function populateBlogPosts() {
+				const container = document.getElementById("blog-posts-container");
+				blogPostsData.forEach((post) => {
+					const postElement = `
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                        <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold mb-2">${post.title}</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">${post.description}</p>
+                            <a href="${post.link}" class="text-primary hover:underline">Read more</a>
+                        </div>
+                    </div>
+                `;
+					container.innerHTML += postElement;
+				});
+			}
+
+			// Call functions to populate content
+			document.addEventListener("DOMContentLoaded", () => {
+				populateAwards();
+				populateUpcomingAwards();
+				populateBlogPosts();
+			});
+
+			// Set hero background image
+			document.addEventListener("DOMContentLoaded", () => {
+				const heroSection = document.getElementById("hero");
+				heroSection.style.backgroundImage =
+					"url('https://example.com/nollywood-hero-image.jpg')";
+			});
+		</script>
 	</body>
 </html>
