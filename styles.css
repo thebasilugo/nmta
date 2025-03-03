@@ -1,0 +1,29 @@
+/* Main stylesheet for NMTA website */
+
+/* Base styles and fonts */
+body {
+	font-family: "Inter", sans-serif;
+}
+
+#billboard {
+	font-family: "Playfair Display", "serif";
+}
+
+/* Video container for responsive videos */
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/* Custom Tailwind CSS configuration will be injected by JavaScript */
