@@ -26,10 +26,10 @@ const contactInfo = {
 // Navigation Links
 const navigationLinks = [
 	{ name: "Home", url: "index.html", order: 1 },
-	{ name: "Movies & Shows", url: "#", order: 2 },
+	{ name: "Movies & Shows", url: "movies-shows.html", order: 2 },
 	{ name: "Awards", url: "awards.html", order: 3 },
-	{ name: "News & Blog", url: "#", order: 4 },
-	{ name: "About", url: "#", order: 5 },
+	{ name: "News & Blog", url: "news-blog.html", order: 4 },
+	{ name: "About", url: "about.html", order: 5 },
 ];
 
 // Award Categories - Extended
