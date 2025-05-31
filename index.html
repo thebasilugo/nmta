@@ -132,73 +132,112 @@
 				</div>
 
 				<!-- Column 2: Awards & Film Festival Stories (slightly larger) -->
-				<div class="lg:col-span-5 bg-secondary rounded-lg p-6 shadow-lg">
-					<h2 class="text-2xl font-bold mb-4 font-serif">
-						Awards & Film Festivals
-					</h2>
-
-					<div class="space-y-6">
-						<!-- Festival stories will be populated by JavaScript -->
+				<div class="lg:col-span-5 enhanced-card">
+					<div class="enhanced-card-header">
+						<h2 class="text-2xl font-bold mb-0 font-serif text-gold-medium">
+							Awards & Film Festivals
+						</h2>
+					</div>
+					<div class="enhanced-card-body">
+						<div class="space-y-6">
+							<!-- Festival stories will be populated by JavaScript -->
+						</div>
 					</div>
 				</div>
 
 				<!-- Column 3: Video Box and Latest Stories -->
-				<div class="lg:col-span-4 bg-secondary rounded-lg p-6 shadow-lg">
-					<div class="video-container mb-6 rounded-lg overflow-hidden">
-						<iframe
-							src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-							title="NMTA Awards Highlights"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</div>
-
-					<h2 class="text-2xl font-bold mb-4 font-serif">Latest Stories</h2>
-
-					<div class="space-y-4">
-						<!-- Latest stories will be populated by JavaScript -->
-					</div>
-
-					<div class="text-center mt-6">
-						<a
-							href="#"
-							class="inline-block bg-accent text-primary px-4 py-2 rounded hover:bg-opacity-90 transition-colors font-semibold"
+				<div class="lg:col-span-4 enhanced-card">
+					<div class="enhanced-card-body">
+						<div
+							class="video-container mb-6 rounded-lg overflow-hidden border border-gold-dark"
 						>
-							View All Stories
-						</a>
+							<iframe
+								src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+								title="NMTA Awards Highlights"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+
+						<h2 class="text-2xl font-bold mb-4 font-serif text-gold-medium">
+							Latest Stories
+						</h2>
+
+						<div class="space-y-4">
+							<!-- Latest stories will be populated by JavaScript -->
+						</div>
+
+						<div class="text-center mt-6">
+							<a
+								href="news-blog.html"
+								class="inline-block bg-accent text-primary px-4 py-2 rounded hover:bg-gold-light transition-colors font-semibold"
+							>
+								View All Stories
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</main>
 
-		<footer class="bg-primary text-gray-100 py-8 border-t border-gray-800">
+		<footer class="bg-deep-blue text-gray-100 py-8 border-t border-gray-800">
 			<div class="container mx-auto px-4">
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
 					<div>
-						<h3 class="text-xl font-bold mb-4 font-serif">NMTA</h3>
+						<h3 class="text-xl font-bold mb-4 font-serif text-gold-medium">
+							NMTA
+						</h3>
 						<p class="text-sm mb-4">
 							Celebrating excellence in Nollywood cinema and television since
 							2010.
 						</p>
 						<div class="flex space-x-4">
-							<a href="#" class="hover:text-accent" aria-label="Facebook">
+							<a
+								href="#"
+								class="hover:text-gold-medium transition-colors"
+								aria-label="Facebook"
+							>
 								<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
 									<path
 										d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
 									/>
 								</svg>
 							</a>
-							<a href="#" class="hover:text-accent" aria-label="Twitter">
+							<a
+								href="#"
+								class="hover:text-gold-medium transition-colors"
+								aria-label="Twitter"
+							>
 								<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
 									<path
 										d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
 									/>
 								</svg>
 							</a>
-							<a href="#" class="hover:text-accent" aria-label="Instagram">
+							<a
+								href="#"
+								class="hover:text-gold-medium transition-colors"
+								aria-label="Instagram"
+							>
 								<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
 									<path
 										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="hover:text-gold-medium transition-colors"
+								aria-label="TikTok"
+							>
+								<svg
+									class="h-6 w-6"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M12.2 2H15c.198 1.148.749 2.208 1.58 3.04.833.832 1.893 1.382 3.04 1.58v3.07a7.926 7.926 0 0 1-4.29-1.31v6.62c0 3.43-2.7 6.21-6.14 6.26A6.2 6.2 0 0 1 3 14.1c0-3.43 2.79-6.22 6.22-6.22.33 0 .66.03.98.08v3.15a3.19 3.19 0 0 0-.98-.16c-1.76 0-3.17 1.43-3.17 3.17s1.41 3.17 3.17 3.17c1.74 0 3.17-1.41 3.17-3.17V2h.83z"
 									/>
 								</svg>
 							</a>
@@ -206,38 +245,75 @@
 					</div>
 
 					<div>
-						<h3 class="text-xl font-bold mb-4 font-serif">Quick Links</h3>
+						<h3 class="text-xl font-bold mb-4 font-serif text-gold-medium">
+							Quick Links
+						</h3>
 						<ul class="space-y-2 text-sm">
-							<li><a href="index.html" class="hover:text-accent">Home</a></li>
 							<li>
-								<a href="#" class="hover:text-accent">Movies & Shows</a>
+								<a
+									href="index.html"
+									class="hover:text-gold-medium transition-colors"
+									>Home</a
+								>
 							</li>
 							<li>
-								<a href="awards.html" class="hover:text-accent">Awards</a>
+								<a
+									href="movies-shows.html"
+									class="hover:text-gold-medium transition-colors"
+									>Movies & Shows</a
+								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-accent">News & Blog</a>
+								<a
+									href="awards.html"
+									class="hover:text-gold-medium transition-colors"
+									>Awards</a
+								>
 							</li>
-							<li><a href="#" class="hover:text-accent">About</a></li>
+							<li>
+								<a
+									href="news-blog.html"
+									class="hover:text-gold-medium transition-colors"
+									>News & Blog</a
+								>
+							</li>
+							<li>
+								<a
+									href="about.html"
+									class="hover:text-gold-medium transition-colors"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									href="contact.html"
+									class="hover:text-gold-medium transition-colors"
+									>Contact</a
+								>
+							</li>
 						</ul>
 					</div>
 
 					<div>
-						<h3 class="text-xl font-bold mb-4 font-serif">Contact Us</h3>
+						<h3 class="text-xl font-bold mb-4 font-serif text-gold-medium">
+							Contact Us
+						</h3>
 						<ul class="space-y-2 text-sm contact-info">
 							<!-- Contact info will be populated by JavaScript -->
 						</ul>
 					</div>
 
 					<div>
-						<h3 class="text-xl font-bold mb-4 font-serif">NMTA Awards 2026</h3>
+						<h3 class="text-xl font-bold mb-4 font-serif text-gold-medium">
+							NMTA Awards 2026
+						</h3>
 						<p class="text-sm mb-4">
 							The 16th annual Nollywood Movie & Television Awards will be held
 							on August 15, 2026 in Lagos.
 						</p>
 						<a
-							href="#"
-							class="inline-block bg-accent text-primary px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-bold text-center w-full"
+							href="submit-film.html"
+							class="inline-block bg-accent text-primary px-6 py-3 rounded-lg hover:bg-gold-light transition-colors font-bold text-center w-full"
 						>
 							Submit Your Film
 						</a>
