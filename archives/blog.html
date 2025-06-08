@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog | Television Nollywood International</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: "class",
+				theme: {
+					extend: {
+						colors: {
+							primary: "#e50914",
+							secondary: "#221f1f",
+						},
+					},
+				},
+			};
+
+			// Blog post data stored in an array of objects
+			const blogPosts = [
+				{
+					title: "Behind the Scenes: Making of 'Lagos Nights'",
+					description:
+						"Get an exclusive look at the production process of the highly anticipated Nollywood thriller.",
+					date: "June 15, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				// Add more blog posts here
+				{
+					title: "Exploring Nollywood's Global Reach",
+					description:
+						"Discover how Nollywood films are reaching global audiences and impacting the industry.",
+					date: "July 10, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				{
+					title: "Exploring Nollywood's Global Reach",
+					description:
+						"Discover how Nollywood films are reaching global audiences and impacting the industry.",
+					date: "July 10, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				{
+					title: "Exploring Nollywood's Global Reach",
+					description:
+						"Discover how Nollywood films are reaching global audiences and impacting the industry.",
+					date: "July 10, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				{
+					title: "Exploring Nollywood's Global Reach",
+					description:
+						"Discover how Nollywood films are reaching global audiences and impacting the industry.",
+					date: "July 10, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				{
+					title: "Exploring Nollywood's Global Reach",
+					description:
+						"Discover how Nollywood films are reaching global audiences and impacting the industry.",
+					date: "July 10, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				{
+					title: "Exploring Nollywood's Global Reach",
+					description:
+						"Discover how Nollywood films are reaching global audiences and impacting the industry.",
+					date: "July 10, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				{
+					title: "Exploring Nollywood's Global Reach",
+					description:
+						"Discover how Nollywood films are reaching global audiences and impacting the industry.",
+					date: "July 10, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+				{
+					title: "The Future of Nollywood: Trends to Watch",
+					description:
+						"A deep dive into upcoming trends shaping the future of the Nollywood film industry.",
+					date: "August 5, 2023",
+					image: "/placeholder.svg?height=200&width=400",
+					link: "#",
+				},
+			];
+
+			// Function to render blog posts dynamically
+			function renderBlogPosts() {
+				const blogContainer = document.getElementById("blog-posts-container");
+				blogPosts.forEach((post) => {
+					const postElement = `
+						<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+							<img src="${post.image}" alt="Blog Post" class="w-full h-48 object-cover" />
+							<div class="p-4">
+								<h2 class="text-xl font-semibold mb-2">${post.title}</h2>
+								<p class="text-gray-600 dark:text-gray-300 mb-4">${post.description}</p>
+								<div class="flex justify-between items-center">
+									<span class="text-sm text-gray-500 dark:text-gray-400">${post.date}</span>
+									<a href="${post.link}" class="text-primary hover:underline">Read more</a>
+								</div>
+							</div>
+						</div>
+					`;
+					blogContainer.innerHTML += postElement;
+				});
+			}
+
+			// Call renderBlogPosts on page load
+			window.onload = renderBlogPosts;
+		</script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+			body {
+				font-family: "Poppins", sans-serif;
+			}
+		</style>
+	</head>
+	<body
+		class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+	>
+		<!-- Header (same as index.html) -->
+
+		<main class="container mx-auto px-4 pt-24 pb-12">
+			<h1 class="text-4xl font-bold mb-8">TNI Blog</h1>
+
+			<div
+				id="blog-posts-container"
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+			>
+				<!-- Blog posts will be rendered here -->
+			</div>
+
+			<!-- Pagination -->
+			<div class="mt-12 flex justify-center">
+				<nav class="inline-flex rounded-md shadow">
+					<a
+						href="#"
+						class="px-3 py-2 rounded-l-md bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+						>Previous</a
+					>
+					<a
+						href="#"
+						class="px-3 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+						>1</a
+					>
+					<a href="#" class="px-3 py-2 bg-primary text-white hover:bg-red-600"
+						>2</a
+					>
+					<a
+						href="#"
+						class="px-3 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+						>3</a
+					>
+					<a
+						href="#"
+						class="px-3 py-2 rounded-r-md bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+						>Next</a
+					>
+				</nav>
+			</div>
+		</main>
+
+		<!-- Footer (same as index.html) -->
+
+		<script src="script.js"></script>
+	</body>
+</html>
