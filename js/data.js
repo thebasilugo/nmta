@@ -14,8 +14,8 @@ const siteConfig = {
 // Contact Information
 const contactInfo = {
 	email: "info@nmtawards.com",
-	phone: "+234 904 357 6346",
-	address: "Lagos, Nigeria",
+	phone: "+234 805 555 4261",
+	address: "111, Old Ojo Road, Amuwo-Odofin, Lagos, Nigeria",
 	socialMedia: [
 		{ platform: "Facebook", url: "#", handle: "@NMTAwards" },
 		{ platform: "Twitter", url: "#", handle: "@NMTAwards" },
