@@ -49,6 +49,26 @@ const navigationLinks = [
 	{ name: "About", url: "about.html", order: 5 },
 ];
 
+// jury members
+const juryMembers = [
+	{ name: "Ogova Oondego", imageurl: "#", country: "Kenya" },
+	{ name: "Sadiq Tafawa Balewa", imageurl: "#", country: "Nigeria" },
+	{ name: "Tade Ogidan", imageurl: "#", country: "Nigeria" },
+	{ name: "Bond Emeruwa", imageurl: "#", country: "Nigeria" },
+	{ name: "Rikkya Atta", imageurl: "#", country: "Nigeria" },
+	{ name: "Fred Amata", imageurl: "#", country: "Nigeria" },
+];
+
+//patron/advisory board
+const patronAndAdvisory = [
+	{ name: "zeb ejiro", imageurl: "" },
+	{ name: "mobert ajaegbu", imageurl: "" },
+	{ name: "andy boyo", imageurl: "" },
+	{ name: "pete edochie", imageurl: "" },
+	{ name: "tunde kelani", imageurl: "" },
+	{ name: "mahmoud alli balogun", imageurl: "" },
+];
+
 // Award Categories - Extended
 let awardCategories = [
 	{
