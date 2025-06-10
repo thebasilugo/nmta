@@ -72,8 +72,30 @@ const patronAndAdvisory = [
 // Award Categories - Extended
 const awardCategories = [
 	{
-		id: "bp2026",
-		title: "Best Picture",
+		id: "nmoty2026",
+		title: "Nollywood Man",
+		description:
+			"Honoring an outstanding male figure who has made significant contributions to the Nollywood industry.",
+		criteria: [
+			"Industry Impact",
+			"Career Achievement",
+			"Leadership",
+			"Innovation",
+		],
+		image:
+			"https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{
+				year: 2025,
+				winner: "Richard Mofe-Damijo",
+				film: "Lifetime Achievement",
+			},
+			{ year: 2024, winner: "Kunle Afolayan", film: "Industry Leadership" },
+		],
+	},
+	{
+		id: "bf2026",
+		title: "Best Film",
 		description:
 			"Honoring the year's most outstanding Nigerian film production.",
 		criteria: ["Production Quality", "Story", "Direction", "Overall Impact"],
