@@ -70,7 +70,7 @@ const patronAndAdvisory = [
 ];
 
 // Award Categories - Extended
-let awardCategories = [
+const awardCategories = [
 	{
 		id: "bp2026",
 		title: "Best Picture",
