@@ -17,9 +17,26 @@ const contactInfo = {
 	phone: "+234 805 555 4261",
 	address: "111, Old Ojo Road, Amuwo-Odofin, Lagos, Nigeria",
 	socialMedia: [
-		{ platform: "Facebook", url: "#", handle: "@NMTAwards" },
-		{ platform: "Twitter", url: "#", handle: "@NMTAwards" },
-		{ platform: "Instagram", url: "#", handle: "@nmtawards" },
+		{
+			platform: "Facebook",
+			url: "https://web.facebook.com/nollywoodmoviesandtelvisionawards",
+			handle: "@nollywoodmoviesandtelevisionawards",
+		},
+		{
+			platform: "Twitter",
+			url: "https://x.com/Official_NMTA",
+			handle: "@Official_NMTA",
+		},
+		{
+			platform: "Instagram",
+			url: "https://www.instagram.com/official_nmta/",
+			handle: "@official_nmta",
+		},
+		{
+			platform: "TikTok",
+			url: "https://www.tiktok.com/@official_nmta",
+			handle: "@official_nmta",
+		},
 	],
 };
 
