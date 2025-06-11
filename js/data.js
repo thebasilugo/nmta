@@ -136,7 +136,12 @@ const awardCategories = [
 		title: "Best Actor",
 		description:
 			"Celebrating outstanding male lead performances in Nigerian cinema.",
-		criteria: ["Performance", "Character Development", "Screen Presence"],
+		criteria: [
+			"Performance Quality",
+			"Character Development",
+			"Screen Presence",
+			"Emotional Range",
+		],
 		image:
 			"https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
