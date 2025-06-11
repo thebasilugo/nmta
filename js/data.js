@@ -97,8 +97,14 @@ const awardCategories = [
 		id: "bf2026",
 		title: "Best Film",
 		description:
-			"Honoring the year's most outstanding Nigerian film production.",
-		criteria: ["Production Quality", "Story", "Direction", "Overall Impact"],
+			"Recognizing the most outstanding film production in Nollywood cinema.",
+		criteria: [
+			"Storytelling",
+			"Direction",
+			"Acting",
+			"Technical Excellence",
+			"Cultural Impact",
+		],
 		image:
 			"https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
@@ -109,8 +115,15 @@ const awardCategories = [
 	{
 		id: "bd2026",
 		title: "Best Director",
-		description: "Recognizing exceptional achievement in film direction.",
-		criteria: ["Vision", "Execution", "Innovation", "Leadership"],
+		description:
+			"Honoring exceptional achievement in film direction within the Nigerian cinema.",
+		criteria: [
+			"Vision",
+			"Execution",
+			"Innovation",
+			"Leadership",
+			"Storytelling",
+		],
 		image:
 			"https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
