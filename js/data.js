@@ -154,7 +154,12 @@ const awardCategories = [
 		title: "Best Actress",
 		description:
 			"Recognizing exceptional female lead performances in Nigerian cinema.",
-		criteria: ["Performance", "Character Development", "Screen Presence"],
+		criteria: [
+			"Performance Quality",
+			"Character Development",
+			"Screen Presence",
+			"Emotional Range",
+		],
 		image:
 			"https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
