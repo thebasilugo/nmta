@@ -168,11 +168,16 @@ const awardCategories = [
 		],
 	},
 	{
-		id: "bsp2026",
-		title: "Best Supporting Performance",
+		id: "basr2026",
+		title: "Best Actor in Supporting Role",
 		description:
-			"Honoring outstanding supporting roles that enhance the story.",
-		criteria: ["Character Impact", "Scene Presence", "Role Development"],
+			"Honoring outstanding male supporting performances that enhance the story.",
+		criteria: [
+			"Character Impact",
+			"Scene Presence",
+			"Role Development",
+			"Ensemble Contribution",
+		],
 		image:
 			"https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
