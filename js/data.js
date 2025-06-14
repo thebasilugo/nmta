@@ -381,10 +381,16 @@ const awardCategories = [
 		],
 	},
 	{
-		id: "bsc2026",
-		title: "Best Screenplay",
-		description: "Celebrating exceptional storytelling and script writing.",
-		criteria: ["Story Structure", "Dialogue", "Character Development"],
+		id: "ais2026",
+		title: "Achievement in Screenplay",
+		description:
+			"Recognizing exceptional writing and storytelling in Nigerian cinema.",
+		criteria: [
+			"Story Structure",
+			"Dialogue",
+			"Character Development",
+			"Originality",
+		],
 		image:
 			"https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
