@@ -718,7 +718,7 @@ function populateAwardCategoryDetails(category) {
 		category.title
 	}" class="w-full h-48 object-cover rounded-lg mb-4">
 							<h2 class="text-2xl font-bold mb-2">${category.title}</h2>
-							<p class="text-gray-300 mb-4">${category.description}</p>
+						  <p class="text-gray-300 mb-4">${category.description}</p>
 					</div>
 					
 					<div class="mb-6">
@@ -785,7 +785,7 @@ function getSocialMediaData(platform) {
 }
 
 // Export all data and functions
-window.nmtaData = {
+const nmtaData = {
 	config: siteConfig,
 	contact: contactInfo,
 	navigation: navigationLinks,
