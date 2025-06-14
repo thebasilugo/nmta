@@ -182,7 +182,202 @@ const awardCategories = [
 			"https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
 			{ year: 2025, winner: "David Adeleke", film: "Family Ties" },
-			{ year: 2024, winner: "Sarah Mensah", film: "The Gathering" },
+			{ year: 2024, winner: "Joseph Okafor", film: "The Gathering" },
+		],
+	},
+	{
+		id: "baisr2026",
+		title: "Best Actress in Supporting Role",
+		description:
+			"Celebrating exceptional female supporting performances in Nigerian cinema.",
+		criteria: [
+			"Character Impact",
+			"Scene Presence",
+			"Role Development",
+			"Ensemble Contribution",
+		],
+		image:
+			"https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Sarah Mensah", film: "The Gathering" },
+			{ year: 2024, winner: "Fatima Bello", film: "Midnight Dreams" },
+		],
+	},
+	{
+		id: "bca2026",
+		title: "Best Child Actor",
+		description:
+			"Recognizing exceptional performances by young talents in Nigerian cinema.",
+		criteria: [
+			"Performance Quality",
+			"Natural Ability",
+			"Character Portrayal",
+			"Screen Presence",
+		],
+		image:
+			"https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{
+				year: 2025,
+				winner: "Tunde Adebayo (Age 10)",
+				film: "The Future Ahead",
+			},
+			{
+				year: 2024,
+				winner: "Amina Ibrahim (Age 12)",
+				film: "Tomorrow's Promise",
+			},
+		],
+	},
+	{
+		id: "bsf2026",
+		title: "Best Short Film",
+		description:
+			"Honoring excellence in short-form storytelling within Nigerian cinema.",
+		criteria: [
+			"Storytelling",
+			"Direction",
+			"Technical Excellence",
+			"Innovation",
+			"Impact",
+		],
+		image:
+			"https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "The Last Bus", director: "Ngozi Okafor" },
+			{ year: 2024, winner: "Morning Light", director: "Samuel Johnson" },
+		],
+	},
+	{
+		id: "bfnla2026",
+		title: "Best Film by a Nigerian Living Abroad",
+		description:
+			"Celebrating outstanding films created by Nigerian filmmakers in the diaspora.",
+		criteria: [
+			"Storytelling",
+			"Cultural Representation",
+			"Technical Excellence",
+			"Global Perspective",
+		],
+		image:
+			"https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Bridges", director: "Chinedu Okonkwo (UK)" },
+			{ year: 2024, winner: "Between Worlds", director: "Amara Okoli (USA)" },
+		],
+	},
+	{
+		id: "btvs2026",
+		title: "Best TV Series",
+		description:
+			"Recognizing excellence in Nigerian television series production.",
+		criteria: [
+			"Storytelling",
+			"Character Development",
+			"Production Quality",
+			"Audience Impact",
+		],
+		image:
+			"https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Lagos Nights", director: "Funke Akindele" },
+			{ year: 2024, winner: "The Compound", director: "Desmond Elliot" },
+		],
+	},
+	{
+		id: "btm2026",
+		title: "Best Telemovie",
+		description:
+			"Honoring outstanding made-for-television movies in Nigerian entertainment.",
+		criteria: [
+			"Storytelling",
+			"Acting",
+			"Production Quality",
+			"Audience Impact",
+		],
+		image:
+			"https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "One Night Stand", director: "Kemi Adetiba" },
+			{ year: 2024, winner: "The Last Letter", director: "Tope Oshin" },
+		],
+	},
+	{
+		id: "ba2026",
+		title: "Best Animation",
+		description: "Celebrating excellence in Nigerian animated productions.",
+		criteria: [
+			"Animation Quality",
+			"Storytelling",
+			"Innovation",
+			"Cultural Relevance",
+		],
+		image:
+			"https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Turtle Tales", director: "Adebayo Studios" },
+			{
+				year: 2024,
+				winner: "The Legend of Makoko",
+				director: "Lagos Animation",
+			},
+		],
+	},
+	{
+		id: "bffdba2026",
+		title: "Best Foreign Film in Diaspora by an African",
+		description:
+			"Recognizing outstanding films created by African filmmakers living abroad.",
+		criteria: [
+			"Storytelling",
+			"Cultural Representation",
+			"Technical Excellence",
+			"Global Impact",
+		],
+		image:
+			"https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{
+				year: 2025,
+				winner: "Crossing Borders",
+				director: "Nana Kwame (Ghana/UK)",
+			},
+			{
+				year: 2024,
+				winner: "Motherland",
+				director: "Aisha Diallo (Senegal/France)",
+			},
+		],
+	},
+	{
+		id: "bsoty2026",
+		title: "Best Skit",
+		description:
+			"Honoring excellence in short-form comedy and entertainment skits.",
+		criteria: [
+			"Creativity",
+			"Performance",
+			"Cultural Relevance",
+			"Audience Impact",
+		],
+		image:
+			"https://images.unsplash.com/photo-1603739903239-8b6e64c3b185?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Market Day", creator: "Comedy Central NG" },
+			{ year: 2024, winner: "The Interview", creator: "Laugh Factory Lagos" },
+		],
+	},
+	{
+		id: "doty2026",
+		title: "Documentary",
+		description:
+			"Celebrating outstanding documentary filmmaking in Nigerian cinema.",
+		criteria: ["Subject Matter", "Research", "Storytelling", "Social Impact"],
+		image:
+			"https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Lagos Waterways", director: "Tunde Johnson" },
+			{ year: 2024, winner: "The Lost Children", director: "Amina Abba" },
 		],
 	},
 	{
