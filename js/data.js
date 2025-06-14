@@ -481,8 +481,8 @@ const awardCategories = [
 		image:
 			"https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
-			{ year: 2025, winner: "TechVision Studios", film: "Future Lagos" },
-			{ year: 2024, winner: "Digital Dreams", film: "The Ancient Ones" },
+			{ year: 2025, winner: "Beauty Works", film: "The Transformation" },
+			{ year: 2024, winner: "Face Art Studios", film: "Tribal Marks" },
 		],
 	},
 	{
