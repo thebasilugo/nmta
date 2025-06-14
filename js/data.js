@@ -399,11 +399,32 @@ const awardCategories = [
 		],
 	},
 	{
-		id: "bci2026",
-		title: "Best Cinematography",
-		description:
-			"Recognizing excellence in visual storytelling and camera work.",
-		criteria: ["Visual Composition", "Lighting", "Camera Movement"],
+		id: "aie2026",
+		title: "Achievement in Editing",
+		description: "Honoring excellence in film editing within Nigerian cinema.",
+		criteria: [
+			"Technical Skill",
+			"Storytelling",
+			"Pacing",
+			"Visual Continuity",
+		],
+		image:
+			"https://images.unsplash.com/photo-1574717024453-354056afd6fc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Tunde Kelani", film: "Sacred Waters" },
+			{ year: 2024, winner: "Ngozi Onwurah", film: "The Silent One" },
+		],
+	},
+	{
+		id: "aic2026",
+		title: "Achievement in Cinematography",
+		description: "Celebrating exceptional visual storytelling and camera work.",
+		criteria: [
+			"Visual Composition",
+			"Lighting",
+			"Camera Movement",
+			"Visual Storytelling",
+		],
 		image:
 			"https://images.unsplash.com/photo-1500940405973-72f790c6582a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
