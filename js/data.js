@@ -433,10 +433,51 @@ const awardCategories = [
 		],
 	},
 	{
-		id: "bve2026",
-		title: "Best Visual Effects",
-		description: "Honoring innovative use of visual effects in storytelling.",
-		criteria: ["Technical Excellence", "Integration", "Creative Impact"],
+		id: "aipd2026",
+		title: "Achievement in Production Design",
+		description:
+			"Recognizing excellence in creating visual worlds and environments.",
+		criteria: [
+			"Set Design",
+			"Visual Aesthetics",
+			"Period Authenticity",
+			"Creative Vision",
+		],
+		image:
+			"https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Adebayo Studios", film: "The Royal Palace" },
+			{ year: 2024, winner: "Creative Designs Ltd", film: "Colonial Days" },
+		],
+	},
+	{
+		id: "aic2026",
+		title: "Achievement in Costume",
+		description: "Honoring exceptional costume design in Nigerian cinema.",
+		criteria: [
+			"Design Quality",
+			"Historical Accuracy",
+			"Character Enhancement",
+			"Visual Impact",
+		],
+		image:
+			"https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+		previousWinners: [
+			{ year: 2025, winner: "Fashion Forward Studios", film: "Royal Garments" },
+			{ year: 2024, winner: "Traditional Designs", film: "Village Square" },
+		],
+	},
+	{
+		id: "aim2026",
+		title: "Achievement in Make-up",
+		description:
+			"Celebrating excellence in make-up artistry in Nigerian cinema.",
+		criteria: [
+			"Technical Skill",
+			"Character Enhancement",
+			"Creative Vision",
+			"Execution",
+		],
 		image:
 			"https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
