@@ -479,7 +479,7 @@ const awardCategories = [
 			"Execution",
 		],
 		image:
-			"https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
+			"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
 			{ year: 2025, winner: "Beauty Works", film: "The Transformation" },
 			{ year: 2024, winner: "Face Art Studios", film: "Tribal Marks" },
