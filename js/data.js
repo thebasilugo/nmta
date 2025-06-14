@@ -572,7 +572,7 @@ let featuredStories = [
 ];
 
 // Festival Stories
-let festivalStories = [
+const festivalStories = [
 	{
 		id: "fest001",
 		title: "Africa Magic Viewers' Choice Awards (AMVCA) 2025",
@@ -696,6 +696,21 @@ function updateSocialMedia(platform, updates) {
 
 // Update the awards page to show more details
 function populateAwardCategoryDetails(category) {
+	return `
+			<div class="bg-secondary rounded-lg p-6 shadow-lg">
+					<div class="mb-6">
+							<img src="${category.image}" alt="${category.title}" class="w-full h-48 object-cover rounded-lg mb-4">
+							<h2 class="text-2xl font-bold mb-2">${category.title}</h2>
+					</div>
+					
+					<a href="#" class="inline-block bg-accent text-primary px-4 py-2 rounded hover:bg-opacity-90 transition-colors">
+							Submit Entry
+					</a>
+			</div>
+	`;
+}
+
+/* function populateAwardCategoryDetails(category) {
 	return `
 			<div class="bg-secondary rounded-lg p-6 shadow-lg">
 					<div class="mb-6">
