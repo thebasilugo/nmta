@@ -486,10 +486,16 @@ const awardCategories = [
 		],
 	},
 	{
-		id: "bst2026",
-		title: "Best Sound",
-		description: "Celebrating excellence in sound design and audio mixing.",
-		criteria: ["Sound Design", "Music Integration", "Audio Quality"],
+		id: "aisd2026",
+		title: "Achievement in Sound Design",
+		description:
+			"Recognizing exceptional sound design and audio mixing in Nigerian cinema.",
+		criteria: [
+			"Sound Quality",
+			"Creative Sound Design",
+			"Technical Excellence",
+			"Storytelling Enhancement",
+		],
 		image:
 			"https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.1",
 		previousWinners: [
