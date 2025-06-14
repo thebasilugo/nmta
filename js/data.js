@@ -759,6 +759,8 @@ function populateAwardCategoryDetails(category) {
 	`;
 }
 
+*/
+
 // Update the getLatestStories function to return more stories
 function getLatestStories(count = 5) {
 	return featuredStories.filter((story) => story.featured).slice(0, count);
@@ -770,6 +772,16 @@ function getUpcomingFestivals() {
 	return festivalStories
 		.filter((festival) => new Date(festival.date) > now)
 		.sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+// Add a function to get the full social media data
+function getSocialMediaData(platform) {
+	const socialMedia = contactInfo.socialMedia;
+	return (
+		socialMedia.find(
+			(sm) => sm.platform.toLowerCase() === platform.toLowerCase()
+		) || null
+	);
 }
 
 // Export all data and functions
@@ -791,7 +803,10 @@ window.nmtaData = {
 	getLatestStories,
 	getUpcomingFestivals,
 	populateAwardCategoryDetails,
+	getSocialMediaData,
 };
+
+window.nmtaData = nmtaData;
 
 nmtaData.updateContactInfo({
 	phone: "+234 904 357 6347",
