@@ -100,7 +100,9 @@ function initializeNavigation() {
 		// Highlight current page
 		if (
 			(item.url === "index.html" && isHomePage()) ||
-			(item.url === "awards.html" && isAwardsPage())
+			(item.url === "awards.html" && isAwardsPage()) ||
+			(item.url === "about.html" &&
+				window.location.pathname.endsWith("about.html"))
 		) {
 			a.classList.add("text-accent");
 		}
