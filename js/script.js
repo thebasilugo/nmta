@@ -5,9 +5,15 @@ const tailwindConfig = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#001e38",
-				secondary: "#001822",
-				accent: "#d4af37", // Gold color for awards theme
+				primary: "var(--primary-color)",
+				secondary: "var(--secondary-color)",
+				accent: "var(--accent-color)",
+				"gold-light": "var(--gold-light)",
+				"gold-medium": "var(--gold-medium)",
+				"gold-dark": "var(--gold-dark)",
+				"deep-blue": "var(--deep-blue)",
+				"midnight-blue": "var(--midnight-blue)",
+				"navy-highlight": "var(--navy-highlight)",
 			},
 			fontFamily: {
 				sans: ["Inter", "sans-serif"],
