@@ -95,7 +95,7 @@ function initializeNavigation() {
 		const a = document.createElement("a");
 		a.href = item.url;
 		a.textContent = item.name;
-		a.className = "hover:text-accent transition-colors";
+		a.className = "hover:text-gold-medium transition-colors";
 
 		// Highlight current page
 		if (
