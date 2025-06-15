@@ -24,7 +24,7 @@ const tailwindConfig = {
 };
 
 // DOM Content Loaded Event
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 	console.log("NMTA Website initialized");
 
 	// Initialize Tailwind config
