@@ -104,7 +104,7 @@ function initializeNavigation() {
 			(item.url === "about.html" &&
 				window.location.pathname.endsWith("about.html"))
 		) {
-			a.classList.add("text-accent");
+			a.classList.add("text-gold-medium");
 		}
 
 		li.appendChild(a);
