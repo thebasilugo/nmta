@@ -16,90 +16,194 @@
 		/>
 	</head>
 	<body class="bg-primary text-gray-100">
-		<header
-			class="bg-primary fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-80"
-		>
-			<nav
-				class="container mx-auto px-4 py-4 flex justify-between items-center"
-			>
-				<a href="index.html" class="text-2xl font-bold text-gray-100">NMTA</a>
-				<ul class="hidden md:flex space-x-6">
-					<!-- Navigation will be populated by JavaScript -->
-				</ul>
-				<!-- Mobile menu button -->
-				<button class="md:hidden text-gray-100">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
-					</svg>
-				</button>
-			</nav>
-		</header>
-		<main class="container mx-auto px-4 py-16">
-			<h1 class="text-4xl font-bold mb-8 text-center font-serif">
-				Featured Movies & Shows
-			</h1>
+		<header class="nav-enhanced fixed top-0 left-0 right-0 z-50">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-gray-100">NMTA</a>
+    <ul class="hidden md:flex space-x-6">
+      <!-- Navigation will be populated by JavaScript -->
+    </ul>
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-gray-100">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+  </nav>
+</header>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<!-- Movie/Show Cards -->
-				<div class="bg-secondary rounded-lg overflow-hidden shadow-lg">
-					<img
-						src="https://source.unsplash.com/random/800x600/?movie"
-						alt="Movie Poster"
-						class="w-full h-48 object-cover"
-					/>
-					<div class="p-6">
-						<h2 class="text-2xl font-bold mb-2">Lagos Nights</h2>
-						<p class="mb-4">
-							A thrilling drama set in the bustling city of Lagos.
-						</p>
-						<a href="#" class="text-accent hover:underline">Learn More</a>
-					</div>
-				</div>
+<!-- Enhanced Hero Section -->
+<section class="hero-section relative overflow-hidden">
+  <div class="hero-overlay"></div>
+  <div class="absolute inset-0 bg-cover bg-center opacity-30" 
+       style="background-image: url('https://images.unsplash.com/photo-1489599735734-79b4212ccb90?w=1920&h=1080&fit=crop');">
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title font-serif">
+      Featured Movies & Shows
+    </h1>
+    <p class="hero-subtitle">
+      Discover the best of Nollywood cinema and television productions
+    </p>
+    <a href="#main-content" class="btn-primary">
+      Explore Collection
+    </a>
+  </div>
+</section>
 
-				<div class="bg-secondary rounded-lg overflow-hidden shadow-lg">
-					<img
-						src="https://source.unsplash.com/random/800x600/?television"
-						alt="TV Show Poster"
-						class="w-full h-48 object-cover"
-					/>
-					<div class="p-6">
-						<h2 class="text-2xl font-bold mb-2">Sunset in Abuja</h2>
-						<p class="mb-4">
-							A captivating series exploring life in Nigeria's capital.
-						</p>
-						<a href="#" class="text-accent hover:underline">Learn More</a>
-					</div>
-				</div>
+<main class="container mx-auto px-4 py-16" id="main-content">
+  <div class="text-center mb-12">
+    <h2 class="section-title text-gradient">Award-Winning Productions</h2>
+    <p class="section-subtitle">
+      Celebrating the films and shows that have defined excellence in African entertainment
+    </p>
+  </div>
 
-				<div class="bg-secondary rounded-lg overflow-hidden shadow-lg">
-					<img
-						src="https://source.unsplash.com/random/800x600/?nollywood"
-						alt="Nollywood Movie Poster"
-						class="w-full h-48 object-cover"
-					/>
-					<div class="p-6">
-						<h2 class="text-2xl font-bold mb-2">The Golden Path</h2>
-						<p class="mb-4">
-							An epic journey through Nigeria's rich cultural landscape.
-						</p>
-						<a href="#" class="text-accent hover:underline">Learn More</a>
-					</div>
-				</div>
+  <div class="grid-enhanced">
+    <!-- Enhanced Movie/Show Cards -->
+    <div class="card-enhanced">
+      <div class="image-enhanced mb-6">
+        <img
+          src="https://images.unsplash.com/photo-1489599735734-79b4212ccb90?w=800&h=600&fit=crop"
+          alt="Lagos Nights Movie Poster"
+          class="w-full h-64 object-cover"
+        />
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gradient">Lagos Nights</h2>
+        <p class="text-gray-300 leading-relaxed">
+          A thrilling drama set in the bustling city of Lagos, exploring the dreams and struggles of young Nigerians navigating love, ambition, and family expectations in modern Africa.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Drama</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Romance</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">2024</span>
+        </div>
+        <a href="#" class="btn-primary">Learn More</a>
+      </div>
+    </div>
 
-				<!-- Add more movie/show cards as needed -->
-			</div>
-		</main>
+    <div class="card-enhanced">
+      <div class="image-enhanced mb-6">
+        <img
+          src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=800&h=600&fit=crop"
+          alt="Sunset in Abuja TV Show Poster"
+          class="w-full h-64 object-cover"
+        />
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gradient">Sunset in Abuja</h2>
+        <p class="text-gray-300 leading-relaxed">
+          A captivating series exploring life in Nigeria's capital, following the interconnected lives of politicians, journalists, and citizens as they navigate power, corruption, and hope.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Political Drama</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Series</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">2024</span>
+        </div>
+        <a href="#" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="card-enhanced">
+      <div class="image-enhanced mb-6">
+        <img
+          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&h=600&fit=crop"
+          alt="The Golden Path Movie Poster"
+          class="w-full h-64 object-cover"
+        />
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gradient">The Golden Path</h2>
+        <p class="text-gray-300 leading-relaxed">
+          An epic journey through Nigeria's rich cultural landscape, following a young woman's quest to preserve her ancestral traditions while embracing modernity and change.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Adventure</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Cultural</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">2024</span>
+        </div>
+        <a href="#" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="card-enhanced">
+      <div class="image-enhanced mb-6">
+        <img
+          src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=800&h=600&fit=crop"
+          alt="The Last Stand Movie Poster"
+          class="w-full h-64 object-cover"
+        />
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gradient">The Last Stand</h2>
+        <p class="text-gray-300 leading-relaxed">
+          A powerful thriller about a community's fight against environmental destruction, showcasing the resilience and determination of ordinary people facing extraordinary challenges.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Thriller</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Environmental</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">2024</span>
+        </div>
+        <a href="#" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="card-enhanced">
+      <div class="image-enhanced mb-6">
+        <img
+          src="https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?w=800&h=600&fit=crop"
+          alt="Desert Rose Movie Poster"
+          class="w-full h-64 object-cover"
+        />
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gradient">Desert Rose</h2>
+        <p class="text-gray-300 leading-relaxed">
+          A moving drama about a woman's journey of self-discovery in Northern Nigeria, exploring themes of identity, tradition, and the courage to forge one's own path.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Drama</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Coming of Age</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">2024</span>
+        </div>
+        <a href="#" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="card-enhanced">
+      <div class="image-enhanced mb-6">
+        <img
+          src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?w=800&h=600&fit=crop"
+          alt="The Promise Movie Poster"
+          class="w-full h-64 object-cover"
+        />
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gradient">The Promise</h2>
+        <p class="text-gray-300 leading-relaxed">
+          An emotional family saga spanning three generations, exploring the bonds that unite us and the promises that define our legacy in contemporary Nigerian society.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Family Drama</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">Generational</span>
+          <span class="px-3 py-1 bg-gold-medium text-primary rounded-full text-sm font-medium">2024</span>
+        </div>
+        <a href="#" class="btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</main>
 
 		<footer class="bg-primary text-gray-100 py-8 border-t border-gray-800">
 			<div class="container mx-auto px-4">

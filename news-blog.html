@@ -16,9 +16,7 @@
 		/>
 	</head>
 	<body class="bg-primary text-gray-100">
-		<header
-			class="bg-primary fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-80"
-		>
+		<header class="nav-enhanced fixed top-0 left-0 right-0 z-50">
 			<nav
 				class="container mx-auto px-4 py-4 flex justify-between items-center"
 			>
@@ -45,70 +43,205 @@
 				</button>
 			</nav>
 		</header>
-		<main class="container mx-auto px-4 py-16">
-			<h1 class="text-4xl font-bold mb-8 text-center font-serif">
-				Latest News & Blog Posts
-			</h1>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<!-- News/Blog Post Cards -->
-				<div class="bg-secondary rounded-lg overflow-hidden shadow-lg">
-					<img
-						src="https://source.unsplash.com/random/800x600/?cinema"
-						alt="News Image"
-						class="w-full h-48 object-cover"
-					/>
-					<div class="p-6">
-						<span class="text-sm text-gray-400">May 15, 2025</span>
-						<h2 class="text-2xl font-bold mb-2">
+		<!-- Enhanced Hero Section -->
+		<section class="hero-section relative overflow-hidden">
+			<div class="hero-overlay"></div>
+			<div
+				class="absolute inset-0 bg-cover bg-center opacity-30"
+				style="
+					background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1920&h=1080&fit=crop');
+				"
+			></div>
+			<div class="hero-content">
+				<h1 class="hero-title font-serif">Latest News & Blog Posts</h1>
+				<p class="hero-subtitle">
+					Stay updated with the latest happenings in Nollywood and African
+					cinema
+				</p>
+				<a href="#main-content" class="btn-primary"> Read Stories </a>
+			</div>
+		</section>
+
+		<main class="container mx-auto px-4 py-16" id="main-content">
+			<div class="text-center mb-12">
+				<h2 class="section-title text-gradient">Industry Insights</h2>
+				<p class="section-subtitle">
+					Discover the stories, trends, and personalities shaping the future of
+					African entertainment
+				</p>
+			</div>
+
+			<div class="grid-enhanced">
+				<!-- Enhanced News/Blog Post Cards -->
+				<div class="card-enhanced">
+					<div class="image-enhanced mb-6">
+						<img
+							src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=800&h=600&fit=crop"
+							alt="Rising Stars in Nollywood"
+							class="w-full h-64 object-cover"
+						/>
+					</div>
+					<div class="space-y-4">
+						<div class="flex items-center gap-4 text-sm text-gray-400">
+							<span>May 15, 2025</span>
+							<span
+								class="px-2 py-1 bg-gold-medium text-primary rounded text-xs font-medium"
+								>Industry News</span
+							>
+						</div>
+						<h2 class="text-2xl font-bold text-gradient">
 							Rising Stars: New Faces in Nollywood
 						</h2>
-						<p class="mb-4">
-							Discover the fresh talent making waves in the Nollywood film
-							industry.
+						<p class="text-gray-300 leading-relaxed">
+							Discover the fresh talent making waves in the Nigerian film
+							industry. From breakthrough performances to innovative
+							storytelling, these emerging artists are reshaping the landscape
+							of African cinema.
 						</p>
-						<a href="#" class="text-accent hover:underline">Read More</a>
+						<a href="#" class="btn-primary">Read More</a>
 					</div>
 				</div>
 
-				<div class="bg-secondary rounded-lg overflow-hidden shadow-lg">
-					<img
-						src="https://source.unsplash.com/random/800x600/?awards"
-						alt="Blog Post Image"
-						class="w-full h-48 object-cover"
-					/>
-					<div class="p-6">
-						<span class="text-sm text-gray-400">May 10, 2025</span>
-						<h2 class="text-2xl font-bold mb-2">
+				<div class="card-enhanced">
+					<div class="image-enhanced mb-6">
+						<img
+							src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&h=600&fit=crop"
+							alt="NMTA Awards 2025 Nominations"
+							class="w-full h-64 object-cover"
+						/>
+					</div>
+					<div class="space-y-4">
+						<div class="flex items-center gap-4 text-sm text-gray-400">
+							<span>May 10, 2025</span>
+							<span
+								class="px-2 py-1 bg-gold-medium text-primary rounded text-xs font-medium"
+								>Awards News</span
+							>
+						</div>
+						<h2 class="text-2xl font-bold text-gradient">
 							NMTA Awards 2025: Nominations Announced
 						</h2>
-						<p class="mb-4">
+						<p class="text-gray-300 leading-relaxed">
 							See who's in the running for Nigeria's biggest night in
-							entertainment.
+							entertainment. This year's nominations showcase the incredible
+							diversity and quality of African storytelling.
 						</p>
-						<a href="#" class="text-accent hover:underline">Read More</a>
+						<a href="#" class="btn-primary">Read More</a>
 					</div>
 				</div>
 
-				<div class="bg-secondary rounded-lg overflow-hidden shadow-lg">
-					<img
-						src="https://source.unsplash.com/random/800x600/?movie"
-						alt="News Image"
-						class="w-full h-48 object-cover"
-					/>
-					<div class="p-6">
-						<span class="text-sm text-gray-400">May 5, 2025</span>
-						<h2 class="text-2xl font-bold mb-2">
+				<div class="card-enhanced">
+					<div class="image-enhanced mb-6">
+						<img
+							src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=800&h=600&fit=crop"
+							alt="Nollywood-Hollywood Collaboration"
+							class="w-full h-64 object-cover"
+						/>
+					</div>
+					<div class="space-y-4">
+						<div class="flex items-center gap-4 text-sm text-gray-400">
+							<span>May 5, 2025</span>
+							<span
+								class="px-2 py-1 bg-gold-medium text-primary rounded text-xs font-medium"
+								>Industry News</span
+							>
+						</div>
+						<h2 class="text-2xl font-bold text-gradient">
 							Nollywood-Hollywood Collaboration Announced
 						</h2>
-						<p class="mb-4">
-							Major studios partner for upcoming international blockbuster.
+						<p class="text-gray-300 leading-relaxed">
+							Major studios partner for upcoming international blockbuster. This
+							groundbreaking collaboration promises to bring African stories to
+							global audiences like never before.
 						</p>
-						<a href="#" class="text-accent hover:underline">Read More</a>
+						<a href="#" class="btn-primary">Read More</a>
 					</div>
 				</div>
 
-				<!-- Add more news/blog post cards as needed -->
+				<div class="card-enhanced">
+					<div class="image-enhanced mb-6">
+						<img
+							src="https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?w=800&h=600&fit=crop"
+							alt="New Film Fund for Nigerian Filmmakers"
+							class="w-full h-64 object-cover"
+						/>
+					</div>
+					<div class="space-y-4">
+						<div class="flex items-center gap-4 text-sm text-gray-400">
+							<span>May 3, 2025</span>
+							<span
+								class="px-2 py-1 bg-gold-medium text-primary rounded text-xs font-medium"
+								>Funding</span
+							>
+						</div>
+						<h2 class="text-2xl font-bold text-gradient">
+							New Film Fund Launches for Nigerian Filmmakers
+						</h2>
+						<p class="text-gray-300 leading-relaxed">
+							₦500 million fund established to support emerging directors and
+							innovative storytelling. This initiative aims to nurture the next
+							generation of African filmmakers.
+						</p>
+						<a href="#" class="btn-primary">Read More</a>
+					</div>
+				</div>
+
+				<div class="card-enhanced">
+					<div class="image-enhanced mb-6">
+						<img
+							src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?w=800&h=600&fit=crop"
+							alt="Nigerian Films Break Box Office Records"
+							class="w-full h-64 object-cover"
+						/>
+					</div>
+					<div class="space-y-4">
+						<div class="flex items-center gap-4 text-sm text-gray-400">
+							<span>May 1, 2025</span>
+							<span
+								class="px-2 py-1 bg-gold-medium text-primary rounded text-xs font-medium"
+								>Box Office</span
+							>
+						</div>
+						<h2 class="text-2xl font-bold text-gradient">
+							Nigerian Films Break Box Office Records
+						</h2>
+						<p class="text-gray-300 leading-relaxed">
+							Local productions dominate cinema earnings nationwide. The success
+							of homegrown content demonstrates the growing appetite for
+							authentic African stories.
+						</p>
+						<a href="#" class="btn-primary">Read More</a>
+					</div>
+				</div>
+
+				<div class="card-enhanced">
+					<div class="image-enhanced mb-6">
+						<img
+							src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=600&fit=crop"
+							alt="Technology in African Filmmaking"
+							class="w-full h-64 object-cover"
+						/>
+					</div>
+					<div class="space-y-4">
+						<div class="flex items-center gap-4 text-sm text-gray-400">
+							<span>April 28, 2025</span>
+							<span
+								class="px-2 py-1 bg-gold-medium text-primary rounded text-xs font-medium"
+								>Technology</span
+							>
+						</div>
+						<h2 class="text-2xl font-bold text-gradient">
+							The Future of African Filmmaking Technology
+						</h2>
+						<p class="text-gray-300 leading-relaxed">
+							Exploring how cutting-edge technology is revolutionizing film
+							production across Africa. From virtual reality to AI-assisted
+							editing, the future is here.
+						</p>
+						<a href="#" class="btn-primary">Read More</a>
+					</div>
+				</div>
 			</div>
 		</main>
 
@@ -144,9 +277,16 @@
 								</svg>
 							</a>
 							<a href="#" class="hover:text-accent" aria-label="TikTok">
-								<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12.2 2H15c.198 1.148.749 2.208 1.58 3.04.833.832 1.893 1.382 3.04 1.58v3.07a7.926 7.926 0 0 1-4.29-1.31v6.62c0 3.43-2.7 6.21-6.14 6.26A6.2 6.2 0 0 1 3 14.1c0-3.43 2.79-6.22 6.22-6.22.33 0 .66.03.98.08v3.15a3.19 3.19 0 0 0-.98-.16c-1.76 0-3.17 1.43-3.17 3.17s1.41 3.17 3.17 3.17c1.74 0 3.17-1.41 3.17-3.17V2h.83z"/>
-								</svg>								
+								<svg
+									class="h-6 w-6"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M12.2 2H15c.198 1.148.749 2.208 1.58 3.04.833.832 1.893 1.382 3.04 1.58v3.07a7.926 7.926 0 0 1-4.29-1.31v6.62c0 3.43-2.7 6.21-6.14 6.26A6.2 6.2 0 0 1 3 14.1c0-3.43 2.79-6.22 6.22-6.22.33 0 .66.03.98.08v3.15a3.19 3.19 0 0 0-.98-.16c-1.76 0-3.17 1.43-3.17 3.17s1.41 3.17 3.17 3.17c1.74 0 3.17-1.41 3.17-3.17V2h.83z"
+									/>
+								</svg>
 							</a>
 						</div>
 					</div>

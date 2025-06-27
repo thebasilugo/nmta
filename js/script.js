@@ -5,15 +5,13 @@ const tailwindConfig = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "var(--primary-color)",
-				secondary: "var(--secondary-color)",
-				accent: "var(--accent-color)",
-				"gold-light": "var(--gold-light)",
-				"gold-medium": "var(--gold-medium)",
-				"gold-dark": "var(--gold-dark)",
-				"deep-blue": "var(--deep-blue)",
-				"midnight-blue": "var(--midnight-blue)",
-				"navy-highlight": "var(--navy-highlight)",
+				primary: "#001e38",
+				secondary: "#001822",
+				accent: "#d4af37", // Gold color for awards theme
+				"gold-light": "#f0d78c",
+				"gold-medium": "#d4af37",
+				"gold-dark": "#b8860b",
+				"black-gold": "#1a1500",
 			},
 			fontFamily: {
 				sans: ["Inter", "sans-serif"],
@@ -43,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Initialize mobile menu toggle
 	initializeMobileMenu();
+
+	// Initialize scroll reveal
+	initializeScrollReveal();
 });
 
 // Initialize Tailwind CSS configuration
@@ -95,7 +96,7 @@ function initializeNavigation() {
 		const a = document.createElement("a");
 		a.href = item.url;
 		a.textContent = item.name;
-		a.className = "hover:text-gold-medium transition-colors";
+		a.className = "hover:text-accent transition-colors";
 
 		// Highlight current page
 		if (
@@ -104,7 +105,7 @@ function initializeNavigation() {
 			(item.url === "about.html" &&
 				window.location.pathname.endsWith("about.html"))
 		) {
-			a.classList.add("text-gold-medium");
+			a.classList.add("text-accent");
 		}
 
 		li.appendChild(a);
@@ -192,7 +193,7 @@ function initializeFooter() {
 		const quickLinksHTML = sortedNav
 			.map(
 				(item) =>
-					`<li><a href="${item.url}" class="hover:text-gold-medium transition-colors">${item.name}</a></li>`
+					`<li><a href="${item.url}" class="hover:text-accent">${item.name}</a></li>`
 			)
 			.join("");
 
@@ -261,93 +262,87 @@ function initializeHomePage() {
 
 // Initialize awards page specific content
 function initializeAwardsPage() {
-	// Set hero background image for awards page
-	const heroSection = document.getElementById("hero");
-	if (heroSection) {
-		heroSection.style.backgroundImage =
-			"url('https://img.freepik.com/free-photo/golden-trophy-cup-dark-background-with-dramatic-lighting-generative-ai_191095-1435.jpg')";
-		heroSection.style.backgroundPosition = "center";
-	}
-
 	// Populate award categories
 	populateAwardCategories();
 
 	// Populate notable persons sections
-	populateJuryMembersSection();
-	populateAdvisoryBoardSection();
+	populateJuryMembers();
+	populateAdvisoryBoard();
 }
 
-// Populate jury members
-function populateJuryMembersSection() {
+// Populate jury members with enhanced cards
+function populateJuryMembers() {
 	const juryContainer = document.getElementById("jury-members");
 	if (!juryContainer || !window.nmtaData.juryMembers) return;
 
 	juryContainer.innerHTML = "";
 
-	window.nmtaData.juryMembers.forEach((member) => {
+	window.nmtaData.juryMembers.forEach((member, index) => {
 		const memberCard = document.createElement("div");
-		memberCard.className = "person-card";
+		memberCard.className = "person-card scroll-reveal";
+		memberCard.style.animationDelay = `${index * 0.1}s`;
 
 		// Default image if none provided
 		const imageUrl =
 			member.imageurl && member.imageurl !== "#"
 				? member.imageurl
-				: `https://ui-avatars.com/api/?name=${encodeURIComponent(
-						member.name
-				  )}&background=0D2339&color=D4AF37&size=150`;
+				: "https://via.placeholder.com/300x300?text=Jury+Member";
 
 		memberCard.innerHTML = `
-      <div class="relative">
-        <img src="${imageUrl}" alt="${member.name}" class="person-image">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-deep-blue to-transparent p-2 rounded-b-full">
-          <div class="text-center text-gold-light text-sm font-semibold">${capitalizeWords(
-						member.name
-					)}</div>
-        </div>
-      </div>
+      <img src="${imageUrl}" alt="${member.name}" class="person-image">
       <div class="person-name">${capitalizeWords(member.name)}</div>
-      <div class="person-role">Jury Member</div>
+      <div class="person-role">${member.role}</div>
+      <div class="person-affiliation">${member.affiliation}</div>
+      <div class="person-bio">${member.bio}</div>
       <div class="person-country">${member.country}</div>
     `;
 
 		juryContainer.appendChild(memberCard);
 	});
+
+	// Trigger scroll reveal animation
+	setTimeout(() => {
+		document.querySelectorAll(".scroll-reveal").forEach((el) => {
+			el.classList.add("revealed");
+		});
+	}, 100);
 }
 
-// Populate advisory board
-function populateAdvisoryBoardSection() {
+// Populate advisory board with enhanced cards
+function populateAdvisoryBoard() {
 	const advisoryContainer = document.getElementById("advisory-board");
 	if (!advisoryContainer || !window.nmtaData.patronAndAdvisory) return;
 
 	advisoryContainer.innerHTML = "";
 
-	window.nmtaData.patronAndAdvisory.forEach((member) => {
+	window.nmtaData.patronAndAdvisory.forEach((member, index) => {
 		const memberCard = document.createElement("div");
-		memberCard.className = "person-card";
+		memberCard.className = "person-card scroll-reveal";
+		memberCard.style.animationDelay = `${index * 0.1}s`;
 
 		// Default image if none provided
 		const imageUrl =
 			member.imageurl && member.imageurl !== ""
 				? member.imageurl
-				: `https://ui-avatars.com/api/?name=${encodeURIComponent(
-						member.name
-				  )}&background=0D2339&color=D4AF37&size=150`;
+				: "https://via.placeholder.com/300x300?text=Advisory+Board";
 
 		memberCard.innerHTML = `
-      <div class="relative">
-        <img src="${imageUrl}" alt="${member.name}" class="person-image">
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-deep-blue to-transparent p-2 rounded-b-full">
-          <div class="text-center text-gold-light text-sm font-semibold">${capitalizeWords(
-						member.name
-					)}</div>
-        </div>
-      </div>
+      <img src="${imageUrl}" alt="${member.name}" class="person-image">
       <div class="person-name">${capitalizeWords(member.name)}</div>
-      <div class="person-role">Advisory Board Member</div>
+      <div class="person-role">${member.role}</div>
+      <div class="person-affiliation">${member.affiliation}</div>
+      <div class="person-bio">${member.bio}</div>
     `;
 
 		advisoryContainer.appendChild(memberCard);
 	});
+
+	// Trigger scroll reveal animation
+	setTimeout(() => {
+		document.querySelectorAll(".scroll-reveal").forEach((el) => {
+			el.classList.add("revealed");
+		});
+	}, 100);
 }
 
 // Helper function to capitalize words
@@ -403,12 +398,12 @@ function populateFeaturedStories() {
 	latestStories.forEach((story) => {
 		const storyElement = document.createElement("div");
 		storyElement.className =
-			"bg-deep-blue rounded-lg p-4 hover:bg-navy-highlight transition-colors border border-gold-dark mb-4";
+			"bg-primary rounded-lg p-4 hover:bg-opacity-80 transition-colors border border-gold-dark";
 		storyElement.innerHTML = `
       <span class="text-xs text-gray-400">${story.date}</span>
       <h3 class="text-lg font-semibold mb-2 text-gold-light">${story.title}</h3>
       <p class="text-gray-300 mb-2">${story.summary}</p>
-      <a href="${story.url}" class="text-gold-medium hover:text-gold-light hover:underline text-sm transition-colors">Read More</a>
+      <a href="${story.url}" class="text-gold-medium hover:underline text-sm">Read More</a>
     `;
 		storiesContainer.appendChild(storyElement);
 	});
@@ -428,286 +423,111 @@ function populateFestivalStories() {
 	upcomingFestivals.forEach((festival) => {
 		const festivalElement = document.createElement("div");
 		festivalElement.className =
-			"bg-deep-blue rounded-lg overflow-hidden border border-gold-dark mb-6";
+			"bg-primary rounded-lg overflow-hidden border border-gold-dark";
 		festivalElement.innerHTML = `
       <img src="${festival.imageUrl}" alt="${festival.title}" class="w-full h-48 object-cover" />
       <div class="p-4">
         <h3 class="text-xl font-semibold mb-2 text-gold-light">${festival.title}</h3>
         <p class="text-gray-300 mb-3">${festival.summary}</p>
-        <div class="flex justify-between items-center">
-          <span class="text-sm text-gold-medium">${festival.date}</span>
-          <a href="${festival.url}" class="text-gold-medium hover:text-gold-light hover:underline transition-colors">Read More</a>
-        </div>
+        <a href="${festival.url}" class="text-gold-medium hover:underline">Read More</a>
       </div>
     `;
 		festivalContainer.appendChild(festivalElement);
 	});
 }
 
-// Update the populateAwardCategories function to handle the expanded list of categories
+// Populate award categories on awards page
 function populateAwardCategories() {
-	const categoriesContainer = document.getElementById(
-		"award-categories-container"
+	const categoriesContainer = document.querySelector(
+		"main .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3"
 	);
 	if (!categoriesContainer) return;
 
 	categoriesContainer.innerHTML = "";
 
-	// Add a filter/search functionality for the categories
-	const filterContainer = document.createElement("div");
-	filterContainer.className = "mb-8 w-full";
-	filterContainer.innerHTML = `
-    <div class="relative max-w-md mx-auto">
-      <input type="text" id="category-search" placeholder="Search award categories..." 
-        class="w-full px-4 py-2 rounded-lg bg-deep-blue text-white border border-gold-medium focus:border-gold-light focus:outline-none">
-      <button id="clear-search" class="absolute right-3 top-2 text-gold-medium hover:text-gold-light">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-  `;
+	window.nmtaData.awards.forEach((category) => {
+		const categoryElement = document.createElement("div");
 
-	// Insert the filter before the categories grid
-	categoriesContainer.parentNode.insertBefore(
-		filterContainer,
-		categoriesContainer
-	);
-
-	// Create a wrapper for the categories with pagination controls
-	const categoriesWrapper = document.createElement("div");
-	categoriesWrapper.className = "categories-wrapper";
-	categoriesContainer.parentNode.insertBefore(
-		categoriesWrapper,
-		categoriesContainer
-	);
-	categoriesWrapper.appendChild(categoriesContainer);
-
-	// Add pagination controls
-	const paginationContainer = document.createElement("div");
-	paginationContainer.className =
-		"pagination-controls flex justify-center mt-8 space-x-2";
-	categoriesWrapper.appendChild(paginationContainer);
-
-	// Set up pagination
-	const itemsPerPage = 9;
-	const currentPage = 1;
-	const totalPages = Math.ceil(window.nmtaData.awards.length / itemsPerPage);
-
-	// Function to render categories for the current page
-	function renderCategories(page, filterText = "") {
-		categoriesContainer.innerHTML = "";
-
-		// Filter categories if search text is provided
-		let filteredCategories = window.nmtaData.awards;
-		if (filterText) {
-			filterText = filterText.toLowerCase();
-			filteredCategories = window.nmtaData.awards.filter(
-				(category) =>
-					category.title.toLowerCase().includes(filterText) ||
-					category.description.toLowerCase().includes(filterText)
-			);
-		}
-
-		// Calculate pagination
-		const totalFilteredPages = Math.ceil(
-			filteredCategories.length / itemsPerPage
-		);
-		const startIndex = (page - 1) * itemsPerPage;
-		const endIndex = Math.min(
-			startIndex + itemsPerPage,
-			filteredCategories.length
-		);
-		const categoriesToShow = filteredCategories.slice(startIndex, endIndex);
-
-		// Update pagination controls
-		updatePaginationControls(page, totalFilteredPages, filterText);
-
-		// If no results found
-		if (categoriesToShow.length === 0) {
-			const noResults = document.createElement("div");
-			noResults.className = "col-span-3 text-center py-12";
-			noResults.innerHTML = `
-        <p class="text-xl text-gold-light mb-4">No award categories found matching "${filterText}"</p>
-        <button id="reset-search" class="bg-gold-medium text-primary px-4 py-2 rounded hover:bg-gold-light transition-colors font-bold">
-          Show All Categories
-        </button>
-      `;
-			categoriesContainer.appendChild(noResults);
-
-			// Add event listener to reset button
-			setTimeout(() => {
-				const resetButton = document.getElementById("reset-search");
-				if (resetButton) {
-					resetButton.addEventListener("click", () => {
-						const searchInput = document.getElementById("category-search");
-						if (searchInput) searchInput.value = "";
-						renderCategories(1);
-					});
-				}
-			}, 0);
-
-			return;
-		}
-
-		// Render the categories for this page
-		categoriesToShow.forEach((category) => {
-			const categoryElement = document.createElement("div");
-			categoryElement.className = "award-category";
-
-			// Create enhanced award category card
-			categoryElement.innerHTML = `
-        <div class="award-category-header">
-          <img src="${category.image}" alt="${category.title}" class="w-full h-48 object-cover rounded-lg mb-4">
-          <h2 class="text-2xl font-bold mb-2 text-gold-medium">${category.title}</h2>
-        </div>
-        
-      `;
-
-			/* 
-      // Create enhanced award category card
-			categoryElement.innerHTML = `
-        <div class="award-category-header">
+		// Modify the HTML to match the new color scheme
+		const categoryHTML = `
+      <div class="bg-secondary rounded-lg p-6 shadow-lg border border-gold-medium hover:shadow-gold">
+        <div class="mb-6">
           <img src="${category.image}" alt="${
-				category.title
-			}" class="w-full h-48 object-cover rounded-lg mb-4">
+			category.title
+		}" class="w-full h-48 object-cover rounded-lg mb-4">
           <h2 class="text-2xl font-bold mb-2 text-gold-medium">${
 						category.title
 					}</h2>
           <p class="text-gray-300 mb-4">${category.description}</p>
         </div>
         
-        <div class="award-category-body">
-          <div class="award-criteria mb-6">
-            <h3 class="text-xl font-semibold mb-3 text-gold-light">Judging Criteria</h3>
-            <ul class="list-disc list-inside text-gray-300">
-              ${category.criteria
-								.map((criterion) => `<li>${criterion}</li>`)
-								.join("")}
-            </ul>
-          </div>
-          
-          <div class="award-winners mb-4">
-            <h3 class="text-xl font-semibold mb-3 text-gold-light">Previous Winners</h3>
-            <div class="space-y-3">
-              ${category.previousWinners
-								.map(
-									(winner) => `
-                  <div class="winner-card">
-                    <div class="font-semibold text-gold-light">${
-											winner.year
-										}</div>
-                    <div class="text-gray-300">
-                      ${winner.winner}
-                      ${
-												winner.film
-													? `<span class="text-gold-medium"> • ${winner.film}</span>`
-													: ""
-											}
-                      ${
-												winner.director
-													? `<span class="text-gold-medium"> • Dir: ${winner.director}</span>`
-													: ""
-											}
-                    </div>
-                  </div>
-                `
-								)
-								.join("")}
-            </div>
-          </div>
-          
-          <a href="#" class="inline-block bg-gold-medium text-primary px-4 py-2 rounded hover:bg-gold-light transition-colors font-bold">
-            Submit Entry
-          </a>
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-3 text-gold-light">Judging Criteria</h3>
+          <ul class="list-disc list-inside text-gray-300">
+            ${category.criteria
+							.map((criterion) => `<li>${criterion}</li>`)
+							.join("")}
+          </ul>
         </div>
-      `;
+        
+        <div class="mb-4">
+          <h3 class="text-xl font-semibold mb-3 text-gold-light">Previous Winners</h3>
+          <div class="space-y-3">
+            ${category.previousWinners
+							.map(
+								(winner) => `
+                <div class="bg-primary rounded p-3 border border-gold-dark">
+                  <div class="font-semibold text-gold-light">${
+										winner.year
+									}</div>
+                  <div class="text-gray-300">
+                    ${winner.winner}
+                    ${
+											winner.film
+												? `<span class="text-gold-medium"> • ${winner.film}</span>`
+												: ""
+										}
+                    ${
+											winner.director
+												? `<span class="text-gold-medium"> • Dir: ${winner.director}</span>`
+												: ""
+										}
+                  </div>
+                </div>
+              `
+							)
+							.join("")}
+          </div>
+        </div>
+        
+        <a href="#" class="inline-block bg-gold-medium text-primary px-4 py-2 rounded hover:bg-gold-light transition-colors font-bold">
+          Submit Entry
+        </a>
+      </div>
+    `;
 
-      */
-
-			categoriesContainer.appendChild(categoryElement);
-		});
-	}
-
-	// Function to update pagination controls
-	function updatePaginationControls(page, totalPages, filterText = "") {
-		paginationContainer.innerHTML = "";
-
-		if (totalPages <= 1) return;
-
-		// Previous button
-		const prevButton = document.createElement("button");
-		prevButton.className = `px-3 py-1 rounded ${
-			page === 1
-				? "bg-deep-blue text-gray-500 cursor-not-allowed"
-				: "bg-navy-highlight text-gold-medium hover:bg-deep-blue hover:text-gold-light"
-		}`;
-		prevButton.innerHTML = "Previous";
-		prevButton.disabled = page === 1;
-		if (page !== 1) {
-			prevButton.addEventListener("click", () =>
-				renderCategories(page - 1, filterText)
-			);
-		}
-		paginationContainer.appendChild(prevButton);
-
-		// Page numbers
-		for (let i = 1; i <= totalPages; i++) {
-			const pageButton = document.createElement("button");
-			pageButton.className = `px-3 py-1 rounded ${
-				i === page
-					? "bg-gold-medium text-primary font-bold"
-					: "bg-navy-highlight text-gold-medium hover:bg-deep-blue hover:text-gold-light"
-			}`;
-			pageButton.innerHTML = i.toString();
-			pageButton.addEventListener("click", () =>
-				renderCategories(i, filterText)
-			);
-			paginationContainer.appendChild(pageButton);
-		}
-
-		// Next button
-		const nextButton = document.createElement("button");
-		nextButton.className = `px-3 py-1 rounded ${
-			page === totalPages
-				? "bg-deep-blue text-gray-500 cursor-not-allowed"
-				: "bg-navy-highlight text-gold-medium hover:bg-deep-blue hover:text-gold-light"
-		}`;
-		nextButton.innerHTML = "Next";
-		nextButton.disabled = page === totalPages;
-		if (page !== totalPages) {
-			nextButton.addEventListener("click", () =>
-				renderCategories(page + 1, filterText)
-			);
-		}
-		paginationContainer.appendChild(nextButton);
-	}
-
-	// Initial render
-	renderCategories(currentPage);
-
-	// Set up search functionality
-	setTimeout(() => {
-		const searchInput = document.getElementById("category-search");
-		const clearButton = document.getElementById("clear-search");
-
-		if (searchInput) {
-			searchInput.addEventListener("input", (e) => {
-				const searchText = e.target.value.trim();
-				renderCategories(1, searchText);
-			});
-		}
-
-		if (clearButton) {
-			clearButton.addEventListener("click", () => {
-				if (searchInput) searchInput.value = "";
-				renderCategories(1);
-			});
-		}
-	}, 0);
+		categoryElement.innerHTML = categoryHTML;
+		categoriesContainer.appendChild(categoryElement.firstChild);
+	});
 }
 
-// Toggle between color schemes (can be called from a button click)
-function toggleColorScheme() {
-	document.body.classList.toggle("alt-theme");
+// Add scroll reveal functionality
+function initializeScrollReveal() {
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: "0px 0px -50px 0px",
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("revealed");
+			}
+		});
+	}, observerOptions);
+
+	document.querySelectorAll(".scroll-reveal").forEach((el) => {
+		el.classList.remove("revealed");
+		observer.observe(el);
+	});
 }
