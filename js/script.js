@@ -21,6 +21,34 @@ const tailwindConfig = {
 	},
 };
 
+// Declare tailwind variable
+window.tailwind = window.tailwind || { config: {} };
+
+// Loading Screen Management
+function showLoadingScreen() {
+	const loadingScreen = document.getElementById("loading-screen");
+	if (loadingScreen) {
+		loadingScreen.classList.remove("hidden");
+	}
+}
+
+function hideLoadingScreen() {
+	const loadingScreen = document.getElementById("loading-screen");
+	if (loadingScreen) {
+		setTimeout(() => {
+			loadingScreen.classList.add("hidden");
+		}, 800); // Small delay to ensure smooth transition
+	}
+}
+
+// Enhanced page navigation with loading
+function navigateWithLoading(url) {
+	showLoadingScreen();
+	setTimeout(() => {
+		window.location.href = url;
+	}, 300);
+}
+
 // DOM Content Loaded Event
 document.addEventListener("DOMContentLoaded", () => {
 	console.log("NMTA Website initialized");
