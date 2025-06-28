@@ -53,6 +53,9 @@ function navigateWithLoading(url) {
 document.addEventListener("DOMContentLoaded", () => {
 	console.log("NMTA Website initialized");
 
+	// Hide loading screen after page loads
+	hideLoadingScreen();
+
 	// Initialize Tailwind config
 	initializeTailwind();
 
