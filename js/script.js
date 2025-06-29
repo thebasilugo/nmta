@@ -75,6 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Initialize scroll reveal
 	initializeScrollReveal();
+
+	// Initialize enhanced navigation
+	initializeEnhancedNavigation();
 });
 
 // Initialize Tailwind CSS configuration
@@ -417,24 +420,23 @@ function updateMonthlyCountdown() {
 
 // Populate featured stories on home page
 function populateFeaturedStories() {
-	const storiesContainer = document.querySelector(
-		"#main-content .lg\\:col-span-4 .space-y-4"
-	);
+	const storiesContainer = document.querySelector("#latest-stories-container");
 	if (!storiesContainer) return;
 
 	storiesContainer.innerHTML = "";
 
 	const latestStories = window.nmtaData.getLatestStories();
 
-	latestStories.forEach((story) => {
+	latestStories.forEach((story, index) => {
 		const storyElement = document.createElement("div");
 		storyElement.className =
-			"bg-primary rounded-lg p-4 hover:bg-opacity-80 transition-colors border border-gold-dark";
+			"bg-primary rounded-lg p-4 hover:bg-opacity-80 transition-all duration-300 border border-gold-dark card-enhanced scroll-reveal";
+		storyElement.style.animationDelay = `${index * 0.1}s`;
 		storyElement.innerHTML = `
       <span class="text-xs text-gray-400">${story.date}</span>
       <h3 class="text-lg font-semibold mb-2 text-gold-light">${story.title}</h3>
-      <p class="text-gray-300 mb-2">${story.summary}</p>
-      <a href="${story.url}" class="text-gold-medium hover:underline text-sm">Read More</a>
+      <p class="text-gray-300 mb-2 leading-relaxed">${story.summary}</p>
+      <a href="${story.url}" class="text-gold-medium hover:text-gold-light text-sm transition-colors duration-300">Read More →</a>
     `;
 		storiesContainer.appendChild(storyElement);
 	});
@@ -443,7 +445,7 @@ function populateFeaturedStories() {
 // Populate festival stories on home page
 function populateFestivalStories() {
 	const festivalContainer = document.querySelector(
-		"#main-content .lg\\:col-span-5 .space-y-6"
+		"#festival-stories-container"
 	);
 	if (!festivalContainer) return;
 
@@ -451,16 +453,18 @@ function populateFestivalStories() {
 
 	const upcomingFestivals = window.nmtaData.getUpcomingFestivals();
 
-	upcomingFestivals.forEach((festival) => {
+	upcomingFestivals.forEach((festival, index) => {
 		const festivalElement = document.createElement("div");
 		festivalElement.className =
-			"bg-primary rounded-lg overflow-hidden border border-gold-dark";
+			"bg-primary rounded-lg overflow-hidden border border-gold-dark card-enhanced scroll-reveal";
+		festivalElement.style.animationDelay = `${index * 0.1}s`;
 		festivalElement.innerHTML = `
-      <img src="${festival.imageUrl}" alt="${festival.title}" class="w-full h-48 object-cover" />
+      <img src="${festival.imageUrl}" alt="${festival.title}" class="w-full h-48 object-cover image-enhanced" />
       <div class="p-4">
+        <div class="text-sm text-gray-400 mb-2">${festival.date} • ${festival.location}</div>
         <h3 class="text-xl font-semibold mb-2 text-gold-light">${festival.title}</h3>
-        <p class="text-gray-300 mb-3">${festival.summary}</p>
-        <a href="${festival.url}" class="text-gold-medium hover:underline">Read More</a>
+        <p class="text-gray-300 mb-3 leading-relaxed">${festival.summary}</p>
+        <a href="${festival.url}" class="text-gold-medium hover:text-gold-light transition-colors duration-300">Read More →</a>
       </div>
     `;
 		festivalContainer.appendChild(festivalElement);
@@ -470,44 +474,48 @@ function populateFestivalStories() {
 // Populate award categories on awards page
 function populateAwardCategories() {
 	const categoriesContainer = document.querySelector(
-		"main .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3"
+		"#award-categories-container"
 	);
 	if (!categoriesContainer) return;
 
 	categoriesContainer.innerHTML = "";
 
-	window.nmtaData.awards.forEach((category) => {
+	window.nmtaData.awards.forEach((category, index) => {
 		const categoryElement = document.createElement("div");
+		categoryElement.className = "scroll-reveal";
+		categoryElement.style.animationDelay = `${index * 0.1}s`;
 
-		// Modify the HTML to match the new color scheme
+		// Enhanced category HTML with better styling
 		const categoryHTML = `
-      <div class="bg-secondary rounded-lg p-6 shadow-lg border border-gold-medium hover:shadow-gold">
+      <div class="bg-secondary rounded-lg p-6 shadow-lg border border-gold-medium hover:shadow-gold card-enhanced">
         <div class="mb-6">
           <img src="${category.image}" alt="${
 			category.title
-		}" class="w-full h-48 object-cover rounded-lg mb-4">
+		}" class="w-full h-48 object-cover rounded-lg mb-4 image-enhanced">
           <h2 class="text-2xl font-bold mb-2 text-gold-medium">${
 						category.title
 					}</h2>
-          <p class="text-gray-300 mb-4">${category.description}</p>
+          <p class="text-gray-300 mb-4 leading-relaxed">${
+						category.description
+					}</p>
         </div>
         
         <div class="mb-6">
           <h3 class="text-xl font-semibold mb-3 text-gold-light">Judging Criteria</h3>
-          <ul class="list-disc list-inside text-gray-300">
+          <ul class="list-disc list-inside text-gray-300 space-y-1">
             ${category.criteria
 							.map((criterion) => `<li>${criterion}</li>`)
 							.join("")}
           </ul>
         </div>
         
-        <div class="mb-4">
+        <div class="mb-6">
           <h3 class="text-xl font-semibold mb-3 text-gold-light">Previous Winners</h3>
           <div class="space-y-3">
             ${category.previousWinners
 							.map(
 								(winner) => `
-                <div class="bg-primary rounded p-3 border border-gold-dark">
+                <div class="bg-primary rounded p-3 border border-gold-dark transition-all duration-300 hover:border-gold-medium">
                   <div class="font-semibold text-gold-light">${
 										winner.year
 									}</div>
@@ -531,7 +539,7 @@ function populateAwardCategories() {
           </div>
         </div>
         
-        <a href="#" class="inline-block bg-gold-medium text-primary px-4 py-2 rounded hover:bg-gold-light transition-colors font-bold">
+        <a href="#" class="btn-primary w-full text-center">
           Submit Entry
         </a>
       </div>
@@ -540,6 +548,13 @@ function populateAwardCategories() {
 		categoryElement.innerHTML = categoryHTML;
 		categoriesContainer.appendChild(categoryElement.firstChild);
 	});
+
+	// Trigger scroll reveal animation
+	setTimeout(() => {
+		document.querySelectorAll(".scroll-reveal").forEach((el) => {
+			el.classList.add("revealed");
+		});
+	}, 100);
 }
 
 // Add scroll reveal functionality
@@ -560,5 +575,34 @@ function initializeScrollReveal() {
 	document.querySelectorAll(".scroll-reveal").forEach((el) => {
 		el.classList.remove("revealed");
 		observer.observe(el);
+	});
+}
+
+// Initialize enhanced navigation with loading screens
+function initializeEnhancedNavigation() {
+	// Add loading screen to all navigation links
+	const navLinks = document.querySelectorAll(
+		"nav a, .btn-primary, .btn-secondary"
+	);
+
+	navLinks.forEach((link) => {
+		// Skip external links and anchors
+		if (
+			link.href &&
+			!link.href.includes("#") &&
+			!link.href.startsWith("mailto:") &&
+			!link.href.startsWith("tel:")
+		) {
+			link.addEventListener("click", (e) => {
+				// Only show loading for internal navigation
+				if (link.hostname === window.location.hostname) {
+					e.preventDefault();
+					showLoadingScreen();
+					setTimeout(() => {
+						window.location.href = link.href;
+					}, 300);
+				}
+			});
+		}
 	});
 }
