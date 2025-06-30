@@ -22,7 +22,10 @@ const tailwindConfig = {
 };
 
 // Declare tailwind variable
-window.tailwind = window.tailwind || { config: {} };
+const tailwind = window.tailwind || { config: {} };
+
+// Enhanced Loading Screen Management
+let isNavigating = false;
 
 // Loading Screen Management
 function showLoadingScreen() {
