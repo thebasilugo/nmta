@@ -86,46 +86,71 @@
 			</section>
 		</div>
 
-		<main id="main-content" class="container mx-auto px-4 pb-12">
-			<!-- Enhanced Three Column Layout -->
-			<div
-				class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 -mt-20 relative z-10"
-			>
-				<!-- Column 1: NMTA Awards with countdown -->
-				<div class="lg:col-span-3 card-enhanced">
-					<h2
-						class="text-2xl font-bold mb-4 text-center font-serif text-gradient"
-					>
-						NMTA Awards
-					</h2>
-					<div class="mb-6 image-enhanced">
-						<img
-							src="images/nmta-statuette.png"
-							alt="NMTA Awards Trophy"
-							class="w-full h-48 object-contain rounded-lg mb-4"
-						/>
-					</div>
-					<div
-						id="monthly-countdown"
-						class="bg-gradient-to-br from-gold-medium to-gold-light rounded-lg p-4 text-center mb-4 text-primary"
-					>
-						<h3 class="text-xl font-semibold mb-2">NMTA Awards 2026</h3>
-						<p class="text-sm mb-3 font-medium">
-							Lagos, Nigeria<span class="block">August 15, 2026</span>
-						</p>
-						<div id="countdown-container" class="text-center">
-							<!-- Monthly countdown will be inserted here by JavaScript -->
-						</div>
-					</div>
-					<div class="text-center mt-4">
-						<a
-							href="awards.html"
-							class="text-gold-medium hover:text-gold-light font-semibold transition-colors"
-						>
-							View Award Categories →
-						</a>
-					</div>
-				</div>
+<main id="main-content" class="container mx-auto px-4 pb-12">
+  <!-- Enhanced Grid Layout -->
+  <div class="parent-grid -mt-20 relative z-10 mb-12">
+    <!-- Div 1: YouTube Video -->
+    <div class="div1 card-enhanced">
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="NMTA Awards Highlights"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Div 2: Awards & Film Festivals -->
+    <div class="div2 card-enhanced">
+      <h2 class="text-2xl font-bold mb-6 font-serif text-gradient">
+        Awards & Film Festivals
+      </h2>
+      <div class="space-y-4 max-h-96 overflow-y-auto" id="festival-stories-container">
+        <!-- Festival stories will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Div 3: Latest Stories -->
+    <div class="div3 card-enhanced">
+      <h2 class="text-xl font-bold mb-4 font-serif text-gradient">Latest Stories</h2>
+      <div class="space-y-3 max-h-80 overflow-y-auto" id="latest-stories-container">
+        <!-- Latest stories will be populated by JavaScript -->
+      </div>
+      <div class="text-center mt-4">
+        <a href="news-blog.html" class="btn-primary text-sm px-4 py-2">
+          View All Stories
+        </a>
+      </div>
+    </div>
+
+    <!-- Div 6: NMTA Awards (Statuette + Countdown) -->
+    <div class="div6 card-enhanced">
+      <h2 class="text-2xl font-bold mb-4 text-center font-serif text-gradient">
+        NMTA Awards
+      </h2>
+      <div class="mb-6 image-enhanced">
+        <img
+          src="images/nmta-statuette.png"
+          alt="NMTA Awards Trophy"
+          class="w-full h-32 object-contain rounded-lg mb-4"
+        />
+      </div>
+      <div id="monthly-countdown" class="bg-gradient-to-br from-gold-medium to-gold-light rounded-lg p-3 text-center mb-4 text-primary">
+        <h3 class="text-lg font-semibold mb-2">NMTA Awards 2026</h3>
+        <p class="text-xs mb-2 font-medium">
+          Lagos, Nigeria<span class="block">August 15, 2026</span>
+        </p>
+        <div id="countdown-container" class="text-center">
+          <!-- Monthly countdown will be inserted here by JavaScript -->
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="awards.html" class="text-gold-medium hover:text-gold-light font-semibold transition-colors text-sm">
+          View Award Categories →
+        </a>
+      </div>
+    </div>
 
 				<!-- Column 2: Awards & Film Festival Stories -->
 				<div class="lg:col-span-5 card-enhanced">
