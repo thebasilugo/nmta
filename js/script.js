@@ -27,37 +27,57 @@ const tailwind = window.tailwind || { config: {} };
 // Enhanced Loading Screen Management
 let isNavigating = false;
 
-// Loading Screen Management
 function showLoadingScreen() {
+	if (isNavigating) return;
+	isNavigating = true;
+
 	const loadingScreen = document.getElementById("loading-screen");
 	if (loadingScreen) {
 		loadingScreen.classList.remove("hidden");
+		loadingScreen.classList.add("show");
+		// Prevent scrolling while loading
+		document.body.style.overflow = "hidden";
 	}
 }
 
 function hideLoadingScreen() {
 	const loadingScreen = document.getElementById("loading-screen");
 	if (loadingScreen) {
+		// Smooth transition out
 		setTimeout(() => {
+			loadingScreen.classList.remove("show");
 			loadingScreen.classList.add("hidden");
-		}, 800); // Small delay to ensure smooth transition
+			document.body.style.overflow = "";
+			isNavigating = false;
+		}, 600); // Slightly longer delay for smoother transition
 	}
 }
 
 // Enhanced page navigation with loading
 function navigateWithLoading(url) {
+	if (isNavigating) return;
+
 	showLoadingScreen();
+
+	// Preload the target page
+	const link = document.createElement("link");
+	link.rel = "prefetch";
+	link.href = url;
+	document.head.appendChild(link);
+
 	setTimeout(() => {
 		window.location.href = url;
-	}, 300);
+	}, 400);
 }
 
 // DOM Content Loaded Event
 document.addEventListener("DOMContentLoaded", () => {
 	console.log("NMTA Website initialized");
 
-	// Hide loading screen after page loads
-	hideLoadingScreen();
+	// Hide loading screen after page loads with a small delay
+	setTimeout(() => {
+		hideLoadingScreen();
+	}, 300);
 
 	// Initialize Tailwind config
 	initializeTailwind();
@@ -92,8 +112,8 @@ function initializeTailwind() {
 		};
 	}
 
-	if (typeof tailwind !== "undefined") {
-		tailwind.config = tailwindConfig;
+	if (typeof window.tailwind !== "undefined") {
+		window.tailwind.config = tailwindConfig;
 		console.log("Tailwind CSS configured");
 	} else {
 		console.warn("Tailwind CSS not loaded");
@@ -589,23 +609,32 @@ function initializeEnhancedNavigation() {
 	);
 
 	navLinks.forEach((link) => {
-		// Skip external links and anchors
+		// Skip external links, anchors, and mailto/tel links
 		if (
 			link.href &&
 			!link.href.includes("#") &&
 			!link.href.startsWith("mailto:") &&
-			!link.href.startsWith("tel:")
+			!link.href.startsWith("tel:") &&
+			link.hostname === window.location.hostname
 		) {
 			link.addEventListener("click", (e) => {
-				// Only show loading for internal navigation
-				if (link.hostname === window.location.hostname) {
-					e.preventDefault();
-					showLoadingScreen();
-					setTimeout(() => {
-						window.location.href = link.href;
-					}, 300);
-				}
+				e.preventDefault();
+				navigateWithLoading(link.href);
 			});
+		}
+	});
+
+	// Handle browser back/forward buttons
+	window.addEventListener("pageshow", (event) => {
+		if (event.persisted) {
+			hideLoadingScreen();
+		}
+	});
+
+	// Handle page visibility changes
+	document.addEventListener("visibilitychange", () => {
+		if (document.visibilityState === "visible" && isNavigating) {
+			hideLoadingScreen();
 		}
 	});
 }
