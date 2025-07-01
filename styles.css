@@ -828,3 +828,169 @@ select:focus {
 .div3 > div:nth-child(2)::-webkit-scrollbar-thumb:hover {
 	background: var(--gold-light);
 }
+
+/* Enhanced scrollable content styling */
+.scrollable-content {
+	scrollbar-width: thin;
+	scrollbar-color: var(--gold-medium) var(--secondary-color);
+	border-radius: 8px;
+	padding-right: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+	width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+	background: var(--secondary-color);
+	border-radius: 4px;
+	margin: 4px 0;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+	background: linear-gradient(
+		135deg,
+		var(--gold-medium) 0%,
+		var(--gold-light) 100%
+	);
+	border-radius: 4px;
+	border: 1px solid var(--gold-dark);
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(
+		135deg,
+		var(--gold-light) 0%,
+		var(--gold-medium) 100%
+	);
+	box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* Scroll indicator styling */
+.scroll-indicator {
+	text-align: center;
+	margin-top: 8px;
+	padding: 4px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		rgba(212, 175, 55, 0.1) 50%,
+		transparent 100%
+	);
+	border-radius: 4px;
+	animation: scrollHint 3s ease-in-out infinite;
+}
+
+@keyframes scrollHint {
+	0%,
+	100% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+/* Enhanced countdown section */
+.countdown-section {
+	position: relative;
+}
+
+.countdown-section::before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	right: -10px;
+	bottom: -10px;
+	background: linear-gradient(
+		45deg,
+		var(--gold-medium),
+		var(--gold-light),
+		var(--gold-medium)
+	);
+	border-radius: 20px;
+	z-index: -1;
+	opacity: 0.3;
+	animation: countdownGlow 4s ease-in-out infinite;
+}
+
+@keyframes countdownGlow {
+	0%,
+	100% {
+		opacity: 0.3;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.5;
+		transform: scale(1.02);
+	}
+}
+
+/* Enhanced countdown container */
+#countdown-container {
+	background: rgba(0, 30, 56, 0.1);
+	border-radius: 8px;
+	padding: 12px;
+	margin: 8px 0;
+}
+
+#countdown-container .grid > div {
+	background: rgba(0, 30, 56, 0.2);
+	border: 1px solid rgba(0, 30, 56, 0.3);
+	transition: all 0.3s ease;
+}
+
+#countdown-container .grid > div:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 12px rgba(0, 30, 56, 0.3);
+}
+
+/* Festival and story cards enhancement */
+.festival-card,
+.story-card {
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border-left: 3px solid transparent;
+	margin-bottom: 12px;
+}
+
+.festival-card:hover,
+.story-card:hover {
+	border-left-color: var(--gold-medium);
+	transform: translateX(4px);
+	background: rgba(212, 175, 55, 0.05);
+}
+
+/* Improved card spacing in scrollable areas */
+.scrollable-content > div {
+	margin-bottom: 16px;
+}
+
+.scrollable-content > div:last-child {
+	margin-bottom: 2px;
+}
+
+/* Enhanced grid responsiveness */
+@media (max-width: 1024px) {
+	.scroll-indicator {
+		display: block;
+	}
+
+	.scrollable-content {
+		max-height: 300px;
+	}
+}
+
+@media (max-width: 768px) {
+	.countdown-section::before {
+		display: none;
+	}
+
+	.scrollable-content {
+		max-height: 250px;
+	}
+
+	.scroll-indicator span {
+		font-size: 0.75rem;
+	}
+}
