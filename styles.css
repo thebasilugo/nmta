@@ -668,11 +668,11 @@ select:focus {
 }
 
 .div6 {
-	grid-area: 1 / 1 / 4 / 3;
+	grid-area: 1 / 1 / 5 / 3;
 }
 
 .div7 {
-	grid-area: 4 / 1 / 6 / 5;
+	grid-area: 5 / 1 / 7 / 5;
 }
 
 /* Responsive adjustments for the grid */
