@@ -522,7 +522,7 @@ function populateAwardCategories() {
 						category.description
 					}</p>
         </div>
-        
+
         <div class="mb-6">
           <h3 class="text-xl font-semibold mb-3 text-gold-light">Judging Criteria</h3>
           <ul class="list-disc list-inside text-gray-300 space-y-1">
@@ -531,7 +531,7 @@ function populateAwardCategories() {
 							.join("")}
           </ul>
         </div>
-        
+
         <div class="mb-6">
           <h3 class="text-xl font-semibold mb-3 text-gold-light">Previous Winners</h3>
           <div class="space-y-3">
