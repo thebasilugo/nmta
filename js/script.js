@@ -448,18 +448,18 @@ function populateFeaturedStories() {
 
 	storiesContainer.innerHTML = "";
 
-	const latestStories = window.nmtaData.getLatestStories();
+	const latestStories = window.nmtaData.getLatestStories(8); // Get more stories
 
 	latestStories.forEach((story, index) => {
 		const storyElement = document.createElement("div");
 		storyElement.className =
-			"bg-primary rounded-lg p-4 hover:bg-opacity-80 transition-all duration-300 border border-gold-dark card-enhanced scroll-reveal";
+			"story-card bg-primary rounded-lg p-3 hover:bg-opacity-80 transition-all duration-300 border border-gold-dark scroll-reveal";
 		storyElement.style.animationDelay = `${index * 0.1}s`;
 		storyElement.innerHTML = `
-      <span class="text-xs text-gray-400">${story.date}</span>
-      <h3 class="text-lg font-semibold mb-2 text-gold-light">${story.title}</h3>
-      <p class="text-gray-300 mb-2 leading-relaxed">${story.summary}</p>
-      <a href="${story.url}" class="text-gold-medium hover:text-gold-light text-sm transition-colors duration-300">Read More →</a>
+      <span class="text-xs text-gray-400 block mb-1">${story.date}</span>
+      <h3 class="text-sm font-semibold mb-2 text-gold-light line-clamp-2">${story.title}</h3>
+      <p class="text-gray-300 mb-2 leading-relaxed text-xs line-clamp-3">${story.summary}</p>
+      <a href="${story.url}" class="text-gold-medium hover:text-gold-light text-xs transition-colors duration-300">Read More →</a>
     `;
 		storiesContainer.appendChild(storyElement);
 	});
@@ -474,21 +474,48 @@ function populateFestivalStories() {
 
 	festivalContainer.innerHTML = "";
 
-	const upcomingFestivals = window.nmtaData.getUpcomingFestivals();
+	// Get all festival stories (not just upcoming ones)
+	const allFestivals =
+		window.nmtaData.festivals || window.nmtaData.festivalStories || [];
 
-	upcomingFestivals.forEach((festival, index) => {
+	allFestivals.forEach((festival, index) => {
 		const festivalElement = document.createElement("div");
 		festivalElement.className =
-			"bg-primary rounded-lg overflow-hidden border border-gold-dark card-enhanced scroll-reveal";
+			"festival-card bg-primary rounded-lg p-4 hover:bg-opacity-80 transition-all duration-300 border border-gold-dark scroll-reveal";
 		festivalElement.style.animationDelay = `${index * 0.1}s`;
+
+		// Create clickable link wrapper
+		const linkWrapper = festival.url
+			? `<a href="${festival.url}" target="_blank" rel="noopener noreferrer" class="block">`
+			: "<div>";
+		const linkWrapperEnd = festival.url ? "</a>" : "</div>";
+
 		festivalElement.innerHTML = `
-      <img src="${festival.imageUrl}" alt="${festival.title}" class="w-full h-48 object-cover image-enhanced" />
-      <div class="p-4">
-        <div class="text-sm text-gray-400 mb-2">${festival.date} • ${festival.location}</div>
-        <h3 class="text-xl font-semibold mb-2 text-gold-light">${festival.title}</h3>
-        <p class="text-gray-300 mb-3 leading-relaxed">${festival.summary}</p>
-        <a href="${festival.url}" class="text-gold-medium hover:text-gold-light transition-colors duration-300">Read More →</a>
-      </div>
+      ${linkWrapper}
+        <div class="flex items-start space-x-3">
+          <div class="flex-shrink-0">
+            <img src="${festival.imageUrl}" alt="${
+			festival.title
+		}" class="w-16 h-16 object-cover rounded-lg" />
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-xs text-gray-400 mb-1">${festival.date} • ${
+			festival.location
+		}</div>
+            <h3 class="text-sm font-semibold mb-1 text-gold-light line-clamp-2">${
+							festival.title
+						}</h3>
+            <p class="text-gray-300 text-xs mb-2 leading-relaxed line-clamp-2">${
+							festival.summary
+						}</p>
+            ${
+							festival.url
+								? '<span class="text-gold-medium hover:text-gold-light text-xs transition-colors duration-300">Visit Website →</span>'
+								: ""
+						}
+          </div>
+        </div>
+      ${linkWrapperEnd}
     `;
 		festivalContainer.appendChild(festivalElement);
 	});
@@ -561,7 +588,7 @@ function populateAwardCategories() {
 							.join("")}
           </div>
         </div>
-        
+
         <a href="#" class="btn-primary w-full text-center">
           Submit Entry
         </a>
