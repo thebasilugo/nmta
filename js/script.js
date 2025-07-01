@@ -418,26 +418,37 @@ function updateMonthlyCountdown() {
 	const now = new Date().getTime();
 	const distance = eventDate - now;
 
-	// Calculate months, days
+	// Calculate months, days, hours, minutes
 	const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44));
 	const days = Math.floor(
 		(distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24)
 	);
+	const hours = Math.floor(
+		(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+	);
+	const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
 	countdownContainer.innerHTML = `
-    <div class="grid grid-cols-2 gap-4 text-center">
-      <div class="bg-gold-medium text-primary rounded-lg p-3">
-        <span class="text-3xl font-bold">${months}</span>
+    <div class="grid grid-cols-2 gap-3 text-center mb-2">
+      <div class="bg-primary text-gold-light rounded-lg p-2 border border-primary">
+        <span class="text-2xl font-bold block">${months}</span>
         <p class="text-xs font-semibold">Months</p>
       </div>
-      <div class="bg-gold-medium text-primary rounded-lg p-3">
-        <span class="text-3xl font-bold">${days}</span>
+      <div class="bg-primary text-gold-light rounded-lg p-2 border border-primary">
+        <span class="text-2xl font-bold block">${days}</span>
         <p class="text-xs font-semibold">Days</p>
       </div>
     </div>
-    <p class="mt-3 text-sm">Until NMTA Awards ${new Date(
-			eventDate
-		).getFullYear()}</p>
+    <div class="grid grid-cols-2 gap-3 text-center">
+      <div class="bg-primary text-gold-light rounded-lg p-2 border border-primary">
+        <span class="text-lg font-bold block">${hours}</span>
+        <p class="text-xs font-semibold">Hours</p>
+      </div>
+      <div class="bg-primary text-gold-light rounded-lg p-2 border border-primary">
+        <span class="text-lg font-bold block">${minutes}</span>
+        <p class="text-xs font-semibold">Minutes</p>
+      </div>
+    </div>
   `;
 }
 
