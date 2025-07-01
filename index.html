@@ -52,130 +52,181 @@
 			</nav>
 		</header>
 		<div class="mx-auto pt-16">
-  <!-- Enhanced Hero Section -->
-  <section class="hero-section relative overflow-hidden">
-    <div class="hero-overlay"></div>
-    <div class="absolute inset-0 bg-cover bg-center opacity-20" 
-         style="background-image: url('https://images.unsplash.com/photo-1489599735734-79b4212ccb90?w=1920&h=1080&fit=crop');">
-    </div>
-    <div class="hero-content">
-      <h1 class="hero-title font-serif">
-        Nollywood Movie & Television Awards
-      </h1>
-      <p class="hero-subtitle">
-        Celebrating excellence in African cinema and television since 2010
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#main-content" class="btn-primary">
-          Explore Awards
-        </a>
-        <a href="awards.html" class="btn-secondary">
-          View Categories
-        </a>
-      </div>
-    </div>
-    <!-- Floating elements for visual interest -->
-    <div class="absolute top-20 left-10 w-20 h-20 bg-gold-medium opacity-10 rounded-full animate-pulse"></div>
-    <div class="absolute bottom-20 right-10 w-32 h-32 bg-gold-light opacity-5 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-  </section>
-</div>
+			<!-- Enhanced Hero Section -->
+			<section class="hero-section relative overflow-hidden">
+				<div class="hero-overlay"></div>
+				<div
+					class="absolute inset-0 bg-cover bg-center opacity-20"
+					style="
+						background-image: url('https://images.unsplash.com/photo-1489599735734-79b4212ccb90?w=1920&h=1080&fit=crop');
+					"
+				></div>
+				<div class="hero-content">
+					<h1 class="hero-title font-serif">
+						Nollywood Movie & Television Awards
+					</h1>
+					<p class="hero-subtitle">
+						Celebrating excellence in African cinema and television since 2010
+					</p>
+					<div
+						class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+					>
+						<a href="#main-content" class="btn-primary"> Explore Awards </a>
+						<a href="awards.html" class="btn-secondary"> View Categories </a>
+					</div>
+				</div>
+				<!-- Floating elements for visual interest -->
+				<div
+					class="absolute top-20 left-10 w-20 h-20 bg-gold-medium opacity-10 rounded-full animate-pulse"
+				></div>
+				<div
+					class="absolute bottom-20 right-10 w-32 h-32 bg-gold-light opacity-5 rounded-full animate-pulse"
+					style="animation-delay: 1s"
+				></div>
+			</section>
+		</div>
 
-<main id="main-content" class="container mx-auto px-4 pb-12">
-  <!-- Enhanced Grid Layout -->
-  <div class="parent-grid -mt-20 relative z-10 mb-12">
-    <!-- Div 1: YouTube Video -->
-    <div class="div1 card-enhanced">
-      <div class="video-container">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="NMTA Awards Highlights"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+		<main id="main-content" class="container mt-12 mx-auto px-4 pb-12">
+			<!-- Enhanced Grid Layout -->
+			<div class="parent-grid -mt-20 relative z-10 mb-8">
+				<!-- Div 1: YouTube Video -->
+				<div class="div1 card-enhanced">
+					<div class="video-container">
+						<iframe
+							src=""
+							title="NMTA Awards Highlights"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
 
-    <!-- Div 2: Awards & Film Festivals -->
-    <div class="div2 card-enhanced">
-      <h2 class="text-2xl font-bold mb-6 font-serif text-gradient">
-        Awards & Film Festivals
-      </h2>
-      <div class="space-y-4 max-h-96 overflow-y-auto" id="festival-stories-container">
-        <!-- Festival stories will be populated by JavaScript -->
-      </div>
-    </div>
+				<!-- Div 2: Awards & Film Festivals -->
+				<div class="div2 card-enhanced">
+					<h2 class="text-2xl font-bold mb-6 font-serif text-gradient">
+						Awards & Film Festivals
+					</h2>
+					<div
+						class="scrollable-content max-h-[90%] overflow-y-auto pr-2"
+						id="festival-stories-container"
+					>
+						<!-- Festival stories will be populated by JavaScript -->
+					</div>
+					<div class="scroll-indicator">
+						<span class="text-xs text-gray-400">↕ Scroll for more</span>
+					</div>
+				</div>
 
-    <!-- Div 3: Latest Stories -->
-    <div class="div3 card-enhanced">
-      <h2 class="text-xl font-bold mb-4 font-serif text-gradient">Latest Stories</h2>
-      <div class="space-y-3 max-h-80 overflow-y-auto" id="latest-stories-container">
-        <!-- Latest stories will be populated by JavaScript -->
-      </div>
-      <div class="text-center mt-4">
-        <a href="news-blog.html" class="btn-primary text-sm px-4 py-2">
-          View All Stories
-        </a>
-      </div>
-    </div>
+				<!-- Div 3: Latest Stories -->
+				<div class="div3 card-enhanced">
+					<h2 class="text-xl font-bold mb-4 font-serif text-gradient">
+						Latest Stories
+					</h2>
+					<div
+						class="scrollable-content max-h-[90%] overflow-y-auto pr-2"
+						id="latest-stories-container"
+					>
+						<!-- Latest stories will be populated by JavaScript -->
+					</div>
+					<div class="scroll-indicator">
+						<span class="text-xs text-gray-400">↕ Scroll for more</span>
+					</div>
+					<div class="text-center mt-4">
+						<a href="news-blog.html" class="btn-primary text-sm px-4 py-2">
+							View All Stories
+						</a>
+					</div>
+				</div>
 
-    <!-- Div 6: NMTA Awards (Statuette + Countdown) -->
-    <div class="div6 card-enhanced">
-      <h2 class="text-2xl font-bold mb-4 text-center font-serif text-gradient">
-        NMTA Awards
-      </h2>
-      <div class="mb-6 image-enhanced">
-        <img
-          src="images/nmta-statuette.png"
-          alt="NMTA Awards Trophy"
-          class="w-full h-32 object-contain rounded-lg mb-4"
-        />
-      </div>
-      <div id="monthly-countdown" class="bg-gradient-to-br from-gold-medium to-gold-light rounded-lg p-3 text-center mb-4 text-primary">
-        <h3 class="text-lg font-semibold mb-2">NMTA Awards 2026</h3>
-        <p class="text-xs mb-2 font-medium">
-          Lagos, Nigeria<span class="block">August 15, 2026</span>
-        </p>
-        <div id="countdown-container" class="text-center">
-          <!-- Monthly countdown will be inserted here by JavaScript -->
-        </div>
-      </div>
-      <div class="text-center">
-        <a href="awards.html" class="text-gold-medium hover:text-gold-light font-semibold transition-colors text-sm">
-          View Award Categories →
-        </a>
-      </div>
-    </div>
+				<!-- Div 6: NMTA Awards (Statuette + Countdown) -->
+				<div class="div6 card-enhanced">
+					<h2
+						class="text-2xl font-bold mb-4 text-center font-serif text-gradient"
+					>
+						NMTA Awards
+					</h2>
+					<div class="mb-6 image-enhanced">
+						<img
+							src="images/nmta-statuette.png"
+							alt="NMTA Awards Trophy"
+							class="w-full h-32 object-contain rounded-lg mb-4"
+						/>
+					</div>
+					<!-- Enhanced Countdown Section -->
+					<div class="countdown-section mb-6">
+						<div
+							class="bg-gradient-to-br from-gold-medium to-gold-light rounded-xl p-4 text-center text-primary shadow-lg border-2 border-gold-dark"
+						>
+							<h3 class="text-xl font-bold mb-2 text-primary">
+								NMTA Awards 2026
+							</h3>
+							<p class="text-sm mb-3 font-semibold text-primary">
+								📍 Lagos, Nigeria<br />
+								📅 August 15, 2026
+							</p>
+							<div id="countdown-container" class="text-center mb-">
+								<!-- Monthly countdown will be inserted here by JavaScript -->
+							</div>
+							<div class="text-xs font-medium text-primary opacity-90">
+								⏰ Don't miss Nigeria's biggest night in entertainment!
+							</div>
+						</div>
+					</div>
+					<div class="text-center">
+						<a
+							href="awards.html"
+							class="text-gold-medium hover:text-gold-light font-semibold transition-colors text-sm"
+						>
+							View Award Categories →
+						</a>
+					</div>
+				</div>
 
-    <!-- Div 7: About NMTA Preview -->
-    <div class="div7 card-enhanced">
-      <h2 class="text-2xl font-bold mb-4 font-serif text-gradient">About NMTA</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="text-center">
-          <div class="text-gold-medium text-3xl font-bold mb-2">15+</div>
-          <h3 class="text-lg font-semibold mb-1 text-gold-light">Years of Excellence</h3>
-          <p class="text-gray-300 text-sm">Celebrating outstanding achievements in African cinema since 2010</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="text-gold-medium text-3xl font-bold mb-2">500+</div>
-          <h3 class="text-lg font-semibold mb-1 text-gold-light">Award Recipients</h3>
-          <p class="text-gray-300 text-sm">Honoring the best talents in Nollywood and African entertainment</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="text-gold-medium text-3xl font-bold mb-2">20+</div>
-          <h3 class="text-lg font-semibold mb-1 text-gold-light">Award Categories</h3>
-          <p class="text-gray-300 text-sm">Comprehensive recognition across all aspects of filmmaking</p>
-        </div>
-      </div>
-      <div class="text-center mt-6">
-        <a href="about.html" class="btn-primary">
-          Learn More About NMTA
-        </a>
-      </div>
-    </div>
-  </div>
-</main>
+				<!-- Div 7: About NMTA Preview -->
+				<div class="div7 card-enhanced">
+					<h2 class="text-2xl font-bold mb-4 font-serif text-gradient">
+						About NMTA
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<div class="text-center">
+							<div class="text-gold-medium text-3xl font-bold mb-2">2025</div>
+							<h3 class="text-lg font-semibold mb-1 text-gold-light">
+								Official Launch Year
+							</h3>
+							<p class="text-gray-300 text-sm">
+								A new era of excellence in African cinema begins with NMTA's
+								debut later this year
+							</p>
+						</div>
+
+						<div class="text-center">
+							<div class="text-gold-medium text-3xl font-bold mb-2">500+</div>
+							<h3 class="text-lg font-semibold mb-1 text-gold-light">
+								Talents To Be Honored
+							</h3>
+							<p class="text-gray-300 text-sm">
+								Recognizing the brightest and boldest voices shaping Nollywood
+								and African storytelling
+							</p>
+						</div>
+
+						<div class="text-center">
+							<div class="text-gold-medium text-3xl font-bold mb-2">20+</div>
+							<h3 class="text-lg font-semibold mb-1 text-gold-light">
+								Inaugural Categories
+							</h3>
+							<p class="text-gray-300 text-sm">
+								Covering every corner of creativity — from acting and directing
+								to editing and innovation
+							</p>
+						</div>
+					</div>
+					<div class="text-center mt-6">
+						<a href="about.html" class="btn-primary"> Learn More About NMTA </a>
+					</div>
+				</div>
+			</div>
+		</main>
 
 		<footer class="bg-primary text-gray-100 py-8 border-t border-gray-800">
 			<div class="container mx-auto px-4">
@@ -209,9 +260,16 @@
 								</svg>
 							</a>
 							<a href="#" class="hover:text-accent" aria-label="TikTok">
-								<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12.2 2H15c.198 1.148.749 2.208 1.58 3.04.833.832 1.893 1.382 3.04 1.58v3.07a7.926 7.926 0 0 1-4.29-1.31v6.62c0 3.43-2.7 6.21-6.14 6.26A6.2 6.2 0 0 1 3 14.1c0-3.43 2.79-6.22 6.22-6.22.33 0 .66.03.98.08v3.15a3.19 3.19 0 0 0-.98-.16c-1.76 0-3.17 1.43-3.17 3.17s1.41 3.17 3.17 3.17c1.74 0 3.17-1.41 3.17-3.17V2h.83z"/>
-								</svg>								
+								<svg
+									class="h-6 w-6"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M12.2 2H15c.198 1.148.749 2.208 1.58 3.04.833.832 1.893 1.382 3.04 1.58v3.07a7.926 7.926 0 0 1-4.29-1.31v6.62c0 3.43-2.7 6.21-6.14 6.26A6.2 6.2 0 0 1 3 14.1c0-3.43 2.79-6.22 6.22-6.22.33 0 .66.03.98.08v3.15a3.19 3.19 0 0 0-.98-.16c-1.76 0-3.17 1.43-3.17 3.17s1.41 3.17 3.17 3.17c1.74 0 3.17-1.41 3.17-3.17V2h.83z"
+									/>
+								</svg>
 							</a>
 						</div>
 					</div>
