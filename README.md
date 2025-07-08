@@ -1,151 +1,85 @@
-\`\`\`markdown
+# NMTA Awards Website
 
-# NMTA - Nollywood Movie & Television Awards
+The official website for the Nigerian Movie & Television Awards (NMTA) - celebrating excellence in Nigerian cinema and television.
 
-A modern, responsive website for the Nollywood Movie & Television Awards, celebrating excellence in African cinema and television since 2010.
+## Features
 
-## 🎬 About NMTA
+- **Modern Design**: Clean, minimalist interface with professional aesthetics
+- **Award Categories**: Comprehensive showcase of all nine award categories
+- **News & Blog**: Dynamic news system with featured articles and updates
+- **Jury Information**: Detailed profiles of distinguished jury members and advisory board
+- **Responsive**: Fully responsive design optimized for all devices
+- **Performance**: Optimized for fast loading and smooth user experience
+- **SEO Optimized**: Proper meta tags and structured data for search engines
 
-The Nollywood Movie & Television Awards (NMTA) is dedicated to recognizing and celebrating excellence in Nollywood cinema and television. Our mission is to promote the growth of the Nollywood film industry, showcase emerging talent, and honor the outstanding achievements of filmmakers, actors, and industry professionals.
+## Tech Stack
 
-## ✨ Features
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Icons**: Lucide React
+- **Images**: Next.js Image optimization
+- **Deployment**: Vercel
 
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Modern Grid Layout**: Custom CSS Grid implementation for optimal content organization
-- **Smooth Animations**: Enhanced user experience with fluid transitions and loading screens
-- **Award Categories**: Comprehensive showcase of all award categories with detailed information
-- **Industry Insights**: Latest news, stories, and updates from Nollywood
-- **Interactive Elements**: Engaging hover effects and smooth navigation
-- **Performance Optimized**: Fast loading times with optimized assets
+## Getting Started
 
-## 🏗️ Technical Stack
+1. Clone the repository
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+3. Run the development server:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Tailwind CSS with custom CSS enhancements
-- **Layout**: CSS Grid and Flexbox
-- **Animations**: CSS transitions and keyframe animations
-- **Responsive**: Mobile-first approach with breakpoint optimization
+## Project Structure
 
-## 📱 Pages
+\`\`\`
+├── app/                    # Next.js app directory
+│   ├── awards/            # Awards page
+│   ├── news/              # News and blog pages
+│   ├── about/             # About page
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── layout/           # Layout components
+│   ├── ui/               # UI components
+│   └── ...               # Feature components
+├── data/                 # Data files
+│   ├── award-categories.ts
+│   ├── jury-members.ts
+│   ├── news-articles.ts
+│   ├── contact-info.ts
+│   └── content.json
+└── public/               # Static assets
+\`\`\`
 
-1. **Home** (`index.html`) - Main landing page with grid layout featuring:
+## Content Management
 
-   - NMTA Awards showcase with countdown
-   - Awards & Film Festivals section
-   - Latest Stories feed
-   - YouTube video integration
-   - About NMTA preview
+All content is managed through structured data files in the `/data` directory:
 
-2. **Awards** (`awards.html`) - Complete awards categories with:
+- `content.json`: Site-wide content and configuration
+- `award-categories.ts`: Award category information
+- `jury-members.ts`: Jury and advisory board profiles
+- `news-articles.ts`: News articles and blog posts
+- `contact-info.ts`: Contact information and social media links
 
-   - Detailed category descriptions
-   - Judging criteria
-   - Previous winners
-   - Jury members and advisory board
+## Deployment
 
-3. **About** (`about.html`) - Organization information including:
+The site is optimized for deployment on Vercel:
 
-   - Mission and vision
-   - History and journey
-   - Brand information
-   - Impact metrics
+1. Connect your repository to Vercel
+2. Configure environment variables if needed
+3. Deploy automatically on push to main branch
 
-4. **Movies & Shows** (`movies-shows.html`) - Featured productions
-5. **News & Blog** (`news-blog.html`) - Industry insights and updates
-6. **Contact** (`contact.html`) - Contact form and sponsorship information
+## Contributing
 
-## 🎨 Design Features
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-### Grid Layout Structure
+## License
 
-The main content uses a sophisticated 6-column, 5-row CSS Grid:
-
-- **Div 1**: YouTube video player
-- **Div 2**: Awards and film festivals content
-- **Div 3**: Latest stories feed
-- **Div 6**: NMTA Awards (statuette + countdown)
-- **Div 7**: About NMTA preview section
-
-### Color Scheme
-
-- **Primary**: Deep navy (#001e38)
-- **Secondary**: Dark teal (#001822)
-- **Accent**: Gold (#d4af37)
-- **Gold variants**: Light (#f0d78c), Medium (#d4af37), Dark (#b8860b)
-
-### Animation System
-
-- Smooth loading screens with spinner animation
-- Card hover effects with elevation and glow
-- Button transitions with transform effects
-- Scroll-reveal animations for content sections
-
-## 🚀 Performance Features
-
-- **Lazy Loading**: Optimized image and content loading
-- **Smooth Transitions**: 60fps animations with hardware acceleration
-- **Responsive Images**: Optimized for different screen densities
-- **Efficient Grid**: CSS Grid with minimal DOM manipulation
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1024px+ (Full 6-column grid)
-- **Tablet**: 768px-1023px (4-column grid adaptation)
-- **Mobile**: <768px (Stacked flexbox layout)
-
-## 🎯 Key Sections
-
-### Awards Categories
-
-- Best Picture
-- Best Director
-- Best Actor/Actress
-- Best Supporting Performance
-- Best Screenplay
-- Best Cinematography
-- Best Visual Effects
-- Best Sound
-
-### Notable Persons
-
-- **Jury Members**: Industry veterans and cultural experts
-- **Patron & Advisory Board**: Nollywood pioneers and legends
-
-## 🔧 Development
-
-The website uses a modular JavaScript architecture:
-
-- `js/data.js` - Content management and data structures
-- `js/script.js` - Main functionality and interactions
-- `styles.css` - Custom styling and animations
-
-### Key JavaScript Features
-
-- Dynamic content population
-- Smooth page transitions
-- Mobile menu functionality
-- Scroll reveal animations
-- Loading screen management
-
-## 🌟 Awards & Recognition
-
-NMTA has honored 500+ talented individuals over 15+ years, establishing itself as one of the most prestigious award ceremonies in the African entertainment industry.
-
-## 📞 Contact
-
-- **Email**: info@nmtawards.com
-- **Phone**: +234 904 357 6347
-- **Address**: 111, Old Ojo Road, Amuwo-Odofin, Lagos, Nigeria
-
-## 🔗 Social Media
-
-- Facebook: @nollywoodmoviesandtelevisionawards
-- Twitter: @Official_NMTA
-- Instagram: @official_nmta
-- TikTok: @official_nmta
-
----
-
-**NMTA Awards 2026** - August 15, 2026 | Lagos, Nigeria
-
-_Celebrating excellence in African cinema and television_
+© 2024 Nigerian Movie & Television Awards. All rights reserved.
