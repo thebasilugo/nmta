@@ -1,113 +1,111 @@
 {
-  "siteInfo": {
-    "name": "Nigerian Movie & Television Awards",
-    "shortName": "NMTA",
-    "year": "2025",
-    "edition": "Inaugural",
-    "tagline": "Celebrating Excellence in Nigerian Cinema",
-    "description": "The Nigerian Movie & Television Awards (NMTA) celebrates outstanding achievements in Nigerian cinema and television, recognizing the talent, creativity, and cultural impact of our storytellers."
-  },
-  "hero": {
-    "title": "Nigerian Movie & Television Awards",
-    "subtitle": "Celebrating Excellence in Nigerian Cinema",
-    "description": "Join us for the inaugural celebration of outstanding achievements in Nigerian film and television. Recognizing the talent, creativity, and cultural impact of our storytellers.",
-    "ctaText": "Submit Your Film",
-    "ctaUrl": "https://filmfreeway.com/nmta",
-    "secondaryCtaText": "Learn More",
-    "secondaryCtaUrl": "/about"
-  },
-  "countdown": {
-    "title": "Awards Ceremony",
-    "date": "2025-12-15T19:00:00Z",
-    "venue": "Eko Convention Centre, Lagos",
-    "description": "Mark your calendars for an unforgettable evening celebrating Nigerian cinema excellence."
-  },
-  "awardCategories": [
-    {
-      "id": "best-picture",
-      "title": "Best Picture",
-      "description": "Honoring the year's most outstanding Nigerian film production",
-      "icon": "Film"
-    },
-    {
-      "id": "best-director",
-      "title": "Best Director",
-      "description": "Recognizing exceptional achievement in film direction",
-      "icon": "Camera"
-    },
-    {
-      "id": "best-actor",
-      "title": "Best Actor",
-      "description": "Celebrating outstanding male lead performances",
-      "icon": "User"
-    },
-    {
-      "id": "best-actress",
-      "title": "Best Actress",
-      "description": "Recognizing exceptional female lead performances",
-      "icon": "User"
-    },
-    {
-      "id": "best-supporting",
-      "title": "Best Supporting Performance",
-      "description": "Honoring outstanding supporting roles",
-      "icon": "Star"
-    },
-    {
-      "id": "best-screenplay",
-      "title": "Best Screenplay",
-      "description": "Celebrating exceptional storytelling and script writing",
-      "icon": "FileText"
-    }
-  ],
-  "timeline": [
-    {
-      "phase": "Submissions Open",
-      "date": "2025-01-15",
-      "status": "upcoming",
-      "description": "Call for entries begins for all categories"
-    },
-    {
-      "phase": "Early Bird Deadline",
-      "date": "2025-06-30",
-      "status": "upcoming",
-      "description": "Discounted submission fees end"
-    },
-    {
-      "phase": "Final Deadline",
-      "date": "2025-09-30",
-      "status": "upcoming",
-      "description": "Last day for submissions"
-    },
-    {
-      "phase": "Jury Deliberation",
-      "date": "2025-10-01",
-      "status": "upcoming",
-      "description": "Expert panel reviews all submissions"
-    },
-    {
-      "phase": "Nominees Announcement",
-      "date": "2025-11-15",
-      "status": "upcoming",
-      "description": "Official nominees revealed"
-    },
-    {
-      "phase": "Awards Ceremony",
-      "date": "2025-12-15",
-      "status": "upcoming",
-      "description": "Grand celebration at Eko Convention Centre"
-    }
-  ],
-  "socialMedia": {
-    "instagram": "https://instagram.com/nmtaawards",
-    "twitter": "https://twitter.com/nmtaawards",
-    "facebook": "https://facebook.com/nmtaawards",
-    "youtube": "https://youtube.com/@nmtaawards",
-    "linkedin": "https://linkedin.com/company/nmtaawards"
-  },
-  "contact": {
-    "email": "info@nmtaawards.com",
-    "phone": "+234 803 123 4567",
-    "address": "123 Film District, Victoria Island, Lagos, Nigeria"
-  }
+	"siteInfo": {
+		"name": "Nigerian Movie & Television Awards",
+		"shortName": "NMTA",
+		"year": "2025",
+		"edition": "Inaugural",
+		"tagline": "Celebrating Excellence in Nigerian Cinema",
+		"description": "The Nigerian Movie & Television Awards (NMTA) celebrates outstanding achievements in Nigerian cinema and television, recognizing the talent, creativity, and cultural impact of our storytellers."
+	},
+	"hero": {
+		"title": "Nigerian Movie & Television Awards",
+		"subtitle": "Celebrating Excellence in Nigerian Cinema",
+		"description": "Join us for the inaugural celebration of outstanding achievements in Nigerian film and television. Recognizing the talent, creativity, and cultural impact of our storytellers.",
+		"ctaText": "Submit Your Film",
+		"ctaUrl": "https://filmfreeway.com/nmta",
+		"secondaryCtaText": "Learn More",
+		"secondaryCtaUrl": "/about"
+	},
+	"countdown": {
+		"title": "Awards Ceremony",
+		"date": "2026-12-15T19:00:00Z",
+		"venue": "Eko Convention Centre, Lagos",
+		"description": "Mark your calendars for an unforgettable evening celebrating Nigerian cinema excellence."
+	},
+	"awardCategories": [
+		{
+			"id": "best-picture",
+			"title": "Best Picture",
+			"description": "Honoring the year's most outstanding Nigerian film production",
+			"icon": "Film"
+		},
+		{
+			"id": "best-director",
+			"title": "Best Director",
+			"description": "Recognizing exceptional achievement in film direction",
+			"icon": "Camera"
+		},
+		{
+			"id": "best-actor",
+			"title": "Best Actor",
+			"description": "Celebrating outstanding male lead performances",
+			"icon": "User"
+		},
+		{
+			"id": "best-actress",
+			"title": "Best Actress",
+			"description": "Recognizing exceptional female lead performances",
+			"icon": "User"
+		},
+		{
+			"id": "best-supporting",
+			"title": "Best Supporting Performance",
+			"description": "Honoring outstanding supporting roles",
+			"icon": "Star"
+		},
+		{
+			"id": "best-screenplay",
+			"title": "Best Screenplay",
+			"description": "Celebrating exceptional storytelling and script writing",
+			"icon": "FileText"
+		}
+	],
+	"timeline": [
+		{
+			"phase": "Submissions Open",
+			"date": "2025-01-15",
+			"status": "upcoming",
+			"description": "Call for entries begins for all categories"
+		},
+		{
+			"phase": "Early Bird Deadline",
+			"date": "2025-06-30",
+			"status": "upcoming",
+			"description": "Discounted submission fees end"
+		},
+		{
+			"phase": "Final Deadline",
+			"date": "2025-09-30",
+			"status": "upcoming",
+			"description": "Last day for submissions"
+		},
+		{
+			"phase": "Jury Deliberation",
+			"date": "2025-10-01",
+			"status": "upcoming",
+			"description": "Expert panel reviews all submissions"
+		},
+		{
+			"phase": "Nominees Announcement",
+			"date": "2025-11-15",
+			"status": "upcoming",
+			"description": "Official nominees revealed"
+		},
+		{
+			"phase": "Awards Ceremony",
+			"date": "2025-12-15",
+			"status": "upcoming",
+			"description": "Grand celebration at Eko Convention Centre"
+		}
+	],
+	"socialMedia": {
+		"instagram": "https://instagram.com/official_nmta",
+		"twitter": "https://twitter.com/Official_NMTA",
+		"facebook": "https://facebook.com/nollywoodmoviesandtelevisionawards"
+	},
+	"contact": {
+		"email": "contact@nmtawards.com",
+		"phone": "+234 904 357 6346",
+		"address": "111, Old Ojo Road, Amuwo-Odofin, Lagos, Nigeria"
+	}
 }
