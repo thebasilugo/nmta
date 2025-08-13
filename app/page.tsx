@@ -1,8 +1,9 @@
-import HeroSection from "@/components/hero-section"
-import CountdownSection from "@/components/countdown-section"
-import AwardCategories from "@/components/award-categories"
-import NewsSidebar from "@/components/news-sidebar"
-import AboutPreview from "@/components/about-preview"
+import HeroSection from "@/components/hero-section";
+import CountdownSection from "@/components/countdown-section";
+import AwardCategories from "@/components/award-categories";
+import NewsSidebar from "@/components/news-sidebar";
+import ShortSidebar from "@/components/short-sidebar";
+import AboutPreview from "@/components/about-preview";
 
 export default function HomePage() {
   return (
