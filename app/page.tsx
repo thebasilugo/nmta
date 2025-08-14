@@ -6,9 +6,9 @@ import ShortSidebar from "@/components/short-sidebar";
 import AboutPreview from "@/components/about-preview";
 
 export default function HomePage() {
-  return (
-    <main className="min-h-screen">
-      <HeroSection />
+	return (
+		<main className="min-h-screen">
+			<HeroSection />
 
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-16">
