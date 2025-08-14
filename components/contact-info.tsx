@@ -1,48 +1,57 @@
 import { Mail, Phone, MapPin, Clock, Globe, Users } from "lucide-react"
 
 const contactDetails = [
-  {
-    icon: MapPin,
-    title: "Office Address",
-    details: ["123 Cinema Boulevard", "Victoria Island, Lagos", "Nigeria"],
-  },
-  {
-    icon: Phone,
-    title: "Phone Numbers",
-    details: ["+234 (0) 123 456 7890", "+234 (0) 987 654 3210"],
-  },
-  {
-    icon: Mail,
-    title: "Email Addresses",
-    details: ["info@nmtawards.com", "submissions@nmtawards.com", "media@nmtawards.com"],
-  },
-  {
-    icon: Clock,
-    title: "Business Hours",
-    details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 4:00 PM", "Sunday: Closed"],
-  },
-]
+	{
+		icon: MapPin,
+		title: "Office Address",
+		details: ["111 Old Ojo Road,", "Amuwo-Odofin,", "Lagos,", "Nigeria"],
+	},
+	{
+		icon: Phone,
+		title: "Phone Numbers",
+		details: ["+234 904 357 6346", "+234 (0) 904 357 6346"],
+	},
+	{
+		icon: Mail,
+		title: "Email Addresses",
+		details: [
+			"contact@nmtawards.com",
+			// "info@nmtawards.com",
+			// "submissions@nmtawards.com",
+			// "contact@nmtawards.com",
+		],
+	},
+	{
+		icon: Clock,
+		title: "Business Hours",
+		details: [
+			"Monday - Friday: 9:00 AM - 6:00 PM",
+			"Saturday: 10:00 AM - 4:00 PM",
+			"Sunday: Closed",
+		],
+	},
+];
 
-const departments = [
-  {
-    icon: Users,
-    title: "Submissions",
-    email: "submissions@nmtawards.com",
-    description: "Film and television submission inquiries",
-  },
-  {
-    icon: Globe,
-    title: "Media & Press",
-    email: "media@nmtawards.com",
-    description: "Press releases, interviews, and media partnerships",
-  },
-  {
-    icon: Users,
-    title: "Partnerships",
-    email: "partnerships@nmtawards.com",
-    description: "Sponsorship and collaboration opportunities",
-  },
-]
+// const departments = [
+// 	{
+// 		icon: Users,
+// 		title: "Submissions",
+// 		email: "submissions@nmtawards.com",
+// 		description: "Film and television submission inquiries",
+// 	},
+// 	{
+// 		icon: Globe,
+// 		title: "Media & Press",
+// 		email: "media@nmtawards.com",
+// 		description: "Press releases, interviews, and media partnerships",
+// 	},
+// 	{
+// 		icon: Users,
+// 		title: "Partnerships",
+// 		email: "partnerships@nmtawards.com",
+// 		description: "Sponsorship and collaboration opportunities",
+// 	},
+// ];
 
 export default function ContactInfo() {
   return (
